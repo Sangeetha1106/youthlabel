@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Orders | THE YOUTH LABEL — Premium Boyswear</title>
+<meta name="description" content="View and track your orders at THE YOUTH LABEL. Premium fashion for boys aged 3–14. For the Youth That Leads.">
+<link rel="icon" href="assets/images/logo/the-youth-label-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announce">DISCOVER THE LATEST COLLECTION – THE YOUTH LABEL</div>
+
+<!-- Navigation Header -->
+<header class="site-header">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+  <div class="wrap header-inner">
+    <label for="nav-toggle" class="burger" aria-label="Open menu"><span></span></label>
+    
+    <a class="logo" href="index.html" aria-label="THE YOUTH LABEL – home">
+      <img src="assets/images/logo/the-youth-label-logo.png" alt="THE YOUTH LABEL" class="site-logo">
+    </a>
+
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <a href="shop.html" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+          <span>Shop</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="dropdown-menu" role="menu" aria-label="Shop Categories">
+          <a href="shop.html#tshirts" class="dropdown-link" role="menuitem">T-Shirts</a>
+          <a href="shop.html#shirts" class="dropdown-link" role="menuitem">Shirts</a>
+          <a href="shop.html#joggers" class="dropdown-link" role="menuitem">Trousers &amp; Joggers</a>
+          <a href="shop.html#coords" class="dropdown-link" role="menuitem">Co-ord Sets</a>
+          <a href="shop.html#new" class="dropdown-link dropdown-highlight" role="menuitem">New Arrivals</a>
+        </div>
+      </div>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <div class="icons">
+      <a class="icon-btn active" href="account.html" aria-label="My Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>
+        </svg>
+      </a>
+      <a class="icon-btn" href="wishlist.html" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+        </svg>
+        <span class="count wishlist-count">4</span>
+      </a>
+      <a class="icon-btn" href="cart.html" aria-label="Shopping Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 8h14l-1 12H6L5 8z"/>
+          <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+        </svg>
+        <span class="count cart-count">3</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- Page Hero Banner -->
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><a href="account.html">My Account</a><span>/</span><span aria-current="page">My Orders</span>
+    </nav>
+    <h1>My Orders</h1>
+    <p>Track your active shipments and view your purchase history.</p>
+  </div>
+</section>
+
+<!-- Account Layout -->
+<div class="wrap acct">
+  <!-- Account Sidebar -->
+  <aside class="side">
+    <div class="who">
+      <span class="avatar" id="orders-avatar">Y</span>
+      <div>
+        <b id="orders-user-name">Customer Name</b><br>
+        <span class="muted" style="font-size:13px" id="orders-user-email">customer@example.com</span>
+      </div>
+    </div>
+    <a class="item" href="account.html">My Profile</a>
+    <a class="item active" href="orders.html">My Orders</a>
+    <a class="item" href="wishlist.html">My Wishlist</a>
+    <a class="item" href="cart.html">My Cart</a>
+    <button type="button" class="item" id="side-logout-btn" style="width:100%;text-align:left;background:none;border:none;cursor:pointer;color:#ef4444;font-family:var(--sans);font-size:14px;display:flex;align-items:center;gap:8px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      Logout
+    </button>
+  </aside>
+
+  <!-- Orders Content Section -->
+  <div>
+    <!-- Empty Orders State (displayed when tyl_orders is empty) -->
+    <div id="orders-empty-state" class="empty-state" style="display:none">
+      <div class="empty-state-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/>
+          <path d="m3.3 7 8.7 5 8.7-5M12 22V12"/>
+        </svg>
+      </div>
+      <h2 class="empty-state-title">You Have No Orders Yet</h2>
+      <p class="empty-state-desc">You haven't placed any orders yet. Discover our collection of sweatshirts, joggers, co-ord sets, and shirts designed for boys aged 3–14.</p>
+      <div class="empty-state-actions">
+        <a class="btn" href="shop.html">Start Shopping</a>
+        <a class="btn outline" href="collections.html">View Collections</a>
+      </div>
+    </div>
+
+    <!-- Active Orders List Container (populated dynamically by js/main.js) -->
+    <div id="orders-list-container">
+      <!-- Injected dynamically from localStorage tyl_orders by js/main.js -->
+    </div>
+  </div>
+</div>
+</main>
+
+<!-- Professional Site Footer -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo" aria-label="THE YOUTH LABEL">
+        <img src="assets/images/logo/the-youth-label-logo.png" alt="THE YOUTH LABEL" class="site-logo-footer">
+      </a>
+      <p class="footer-tagline">Stylish, versatile boyswear for ages 3–14. For the Youth That Leads.</p>
+      <div class="brand-palette">
+        <span class="palette-chip palette-smoke" title="Smoke Grey"></span>
+        <span class="palette-chip palette-black" title="Black"></span>
+        <span class="palette-chip palette-white" title="White"></span>
+      </div>
+    </div>
+    <div>
+      <h4>Shop Categories</h4>
+      <ul>
+        <li><a href="shop.html#tshirts">T-Shirts</a></li>
+        <li><a href="shop.html#shirts">Shirts</a></li>
+        <li><a href="shop.html#joggers">Trousers &amp; Joggers</a></li>
+        <li><a href="shop.html#coords">Co-ord Sets</a></li>
+        <li><a href="shop.html#new">New Arrivals</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="account.html">My Account</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact Information</h4>
+      <ul class="contact-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>
+          <a href="tel:+918838666712">+91 8838666712</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>
+          <a href="mailto:support.theyouthlabel@gmail.com">support.theyouthlabel@gmail.com</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.4-4A8 8 0 1 1 8 18.6L4 20z"/><path d="M9 10c.5 2.5 2.5 4.5 5 5l1.2-1.4-2-1-1 .8c-.8-.4-1.6-1.2-2-2l.8-1-1-2L9 10z"/></svg>
+          <a href="https://wa.me/918838666712" target="_blank" rel="noopener">WhatsApp: +91 8838666712</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap">
+      <span>© 2026 THE YOUTH LABEL. For the Youth That Leads. All rights reserved.</span>
+      <span>Premium Boyswear · Ages 3–14</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Shared Vanilla JavaScript -->
+<script src="js/main.js"></script>
+</body>
+</html>

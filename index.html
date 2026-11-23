@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THE YOUTH LABEL | Premium Boys’ Fashion — For the Youth That Leads</title>
+<meta name="description" content="THE YOUTH LABEL – Premium, stylish, and versatile boyswear for ages 3–14. For the Youth That Leads.">
+<link rel="icon" href="assets/images/logo/the-youth-label-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Section 1 – Announcement Bar -->
+<div class="announce">DISCOVER THE LATEST COLLECTION – THE YOUTH LABEL</div>
+
+<!-- Section 2 – Navigation Header -->
+<header class="site-header">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+  <div class="wrap header-inner">
+    <label for="nav-toggle" class="burger" aria-label="Open menu"><span></span></label>
+    
+    <a class="logo" href="index.html" aria-label="THE YOUTH LABEL – home">
+      <img src="assets/images/logo/the-youth-label-logo.png" alt="THE YOUTH LABEL" class="site-logo">
+    </a>
+
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="index.html" class="active">Home</a>
+      <div class="nav-dropdown">
+        <a href="shop.html" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+          <span>Shop</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="dropdown-menu" role="menu" aria-label="Shop Categories">
+          <a href="shop.html#tshirts" class="dropdown-link" role="menuitem">T-Shirts</a>
+          <a href="shop.html#shirts" class="dropdown-link" role="menuitem">Shirts</a>
+          <a href="shop.html#joggers" class="dropdown-link" role="menuitem">Trousers &amp; Joggers</a>
+          <a href="shop.html#coords" class="dropdown-link" role="menuitem">Co-ord Sets</a>
+          <a href="shop.html#new" class="dropdown-link dropdown-highlight" role="menuitem">New Arrivals</a>
+        </div>
+      </div>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="icons">
+      <a class="icon-btn" href="account.html" aria-label="My Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>
+        </svg>
+      </a>
+      <a class="icon-btn" href="wishlist.html" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+        </svg>
+        <span class="count wishlist-count">4</span>
+      </a>
+      <a class="icon-btn" href="cart.html" aria-label="Shopping Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 8h14l-1 12H6L5 8z"/>
+          <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+        </svg>
+        <span class="count cart-count">3</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- Section 3 – Main Hero Banner Slider -->
+<section class="hero-master" aria-label="Featured Collection Hero Slider">
+  <div class="hero-slider" id="hero-slider" role="region" aria-roledescription="carousel" aria-label="Homepage Banners">
+    <div class="hero-slides-track">
+      <!-- Slide 1 -->
+      <div class="hero-slide active" role="group" aria-roledescription="slide" aria-label="1 of 2">
+        <a href="shop.html" class="hero-master-banner" aria-label="Shop THE YOUTH LABEL — For the Youth That Leads">
+          <img src="assets/images/banners/home-hero-banner.jpg" alt="THE YOUTH LABEL — FOR THE YOUTH THAT LEADS. Distinctive styles. Modern looks. Everyday confidence." class="hero-master-img" width="1024" height="576" fetchpriority="high">
+          <span class="sr-only">THE YOUTH LABEL — FOR THE YOUTH THAT LEADS. Distinctive styles. Modern looks. Everyday confidence. Shop Now.</span>
+        </a>
+      </div>
+      <!-- Slide 2 -->
+      <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="2 of 2">
+        <a href="shop.html" class="hero-master-banner" aria-label="Shop THE YOUTH LABEL — Stay Trendy STAY YOU">
+          <img src="assets/images/banners/home-hero-banner-2.jpg" alt="THE YOUTH LABEL — Stay Trendy STAY YOU. Modern Fashion for Young Dreamers." class="hero-master-img" width="1024" height="576" loading="lazy" decoding="async">
+          <span class="sr-only">THE YOUTH LABEL — Stay Trendy STAY YOU. Modern Fashion for Young Dreamers. Shop Now.</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button type="button" class="hero-slider-arrow prev" aria-label="Previous banner" id="hero-prev">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button type="button" class="hero-slider-arrow next" aria-label="Next banner" id="hero-next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+
+    <!-- Slide Indicators / Pagination Dots -->
+    <div class="hero-slider-dots" role="tablist" aria-label="Banner slides">
+      <button type="button" class="hero-dot active" role="tab" aria-selected="true" aria-label="Slide 1" data-slide="0"></button>
+      <button type="button" class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 2" data-slide="1"></button>
+    </div>
+  </div>
+  <div class="hero-quick-bar">
+    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding:12px 0">
+      <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--smoke-600);font-weight:600">Boys’ Fashion · Ages 3–14</span>
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+        <a href="shop.html" class="btn sm">Shop New Arrivals</a>
+        <a href="collections.html" class="btn outline sm">Explore Collections</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4 – Shop by Category -->
+<section class="section" aria-label="Shop by Category">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Curated Edits</p>
+        <h2 class="section-title">Shop by Category</h2>
+      </div>
+      <a class="link-arrow" href="shop.html">View All Categories <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="cat-grid-5">
+      <!-- 1. Sweatshirts -->
+      <a class="cat-card" href="shop.html#sweatshirts" aria-label="Shop Sweatshirts">
+        <img src="assets/images/products/wild-bunch.jpg" alt="Boys Sweatshirts Collection" style="--px:48%;--z:1.5;--ox:50%;--oy:12%" loading="lazy" decoding="async">
+        <div class="cat-card-content">
+          <h3>Sweatshirts</h3>
+          <span class="cat-action">Shop Edit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <!-- 2. T-Shirts -->
+      <a class="cat-card" href="shop.html#tshirts" aria-label="Shop T-Shirts">
+        <img src="assets/images/products/geometric-print-tshirt.jpg" alt="Boys T-Shirts Collection" style="--px:50%;--z:1.2;--ox:50%;--oy:25%" loading="lazy" decoding="async">
+        <div class="cat-card-content">
+          <h3>T-Shirts</h3>
+          <span class="cat-action">Shop Edit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <!-- 3. Shirts -->
+      <a class="cat-card" href="shop.html#shirts" aria-label="Shop Shirts">
+        <img src="assets/images/products/grey-plaid-overshirt.jpg" alt="Boys Shirts Collection" style="--px:50%;--z:1.2;--ox:50%;--oy:20%" loading="lazy" decoding="async">
+        <div class="cat-card-content">
+          <h3>Shirts</h3>
+          <span class="cat-action">Shop Edit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <!-- 4. Trousers & Joggers -->
+      <a class="cat-card" href="shop.html#joggers" aria-label="Shop Trousers & Joggers">
+        <img src="assets/images/products/future-icon.jpg" alt="Boys Trousers and Cargo Joggers" style="--px:70%;--z:2.0;--ox:50%;--oy:95%" loading="lazy" decoding="async">
+        <div class="cat-card-content">
+          <h3>Trousers &amp; Joggers</h3>
+          <span class="cat-action">Shop Edit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <!-- 5. Co-ord Sets -->
+      <a class="cat-card" href="shop.html#coords" aria-label="Shop Co-ord Sets">
+        <img src="assets/images/products/homies-crew.jpg" alt="Boys Co-ord Sets Collection" style="--px:64%;--py:50%" loading="lazy" decoding="async">
+        <div class="cat-card-content">
+          <h3>Co-ord Sets</h3>
+          <span class="cat-action">Shop Edit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5 – New Arrivals -->
+<section class="section tint" aria-label="New Arrivals">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Just Landed</p>
+        <h2 class="section-title">New Arrivals</h2>
+      </div>
+      <a class="link-arrow" href="shop.html#new">Shop All New <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="grid grid-4">
+      <!-- Product 1 -->
+      <article class="card">
+        <div class="media">
+          <img src="assets/images/products/wild-bunch.jpg" alt="Wild Bunch Script Sweatshirt" style="--px:48%;--z:1.5;--ox:50%;--oy:12%" loading="lazy" decoding="async">
+          <span class="badge">New</span>
+          <a class="quick" href="product.html#p-wild-bunch-sweatshirt">Quick View</a>
+        </div>
+        <button type="button" class="heart" data-wishlist-id="p-wild-bunch-sweatshirt" aria-label="Toggle Wild Bunch Script Sweatshirt in wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+          </svg>
+        </button>
+        <div class="card-body">
+          <p class="cat">Sweatshirts</p>
+          <h3><a href="product.html#p-wild-bunch-sweatshirt">Wild Bunch Script Sweatshirt</a></h3>
+          <div class="card-footer">
+            <span class="price">₹1,399</span>
+            <a class="btn-view" href="product.html#p-wild-bunch-sweatshirt">View Product</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 2 -->
+      <article class="card">
+        <div class="media">
+          <img src="assets/images/products/homies-crew.jpg" alt="Homies Crew Script Sweatshirt" style="--px:50%;--z:1.5;--ox:50%;--oy:10%" loading="lazy" decoding="async">
+          <span class="badge">New</span>
+          <a class="quick" href="product.html#p-homies-crew-sweatshirt">Quick View</a>
+        </div>
+        <button type="button" class="heart" data-wishlist-id="p-homies-crew-sweatshirt" aria-label="Toggle Homies Crew Script Sweatshirt in wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+          </svg>
+        </button>
+        <div class="card-body">
+          <p class="cat">Sweatshirts</p>
+          <h3><a href="product.html#p-homies-crew-sweatshirt">Homies Crew Script Sweatshirt</a></h3>
+          <div class="card-footer">
+            <span class="price">₹1,399</span>
+            <a class="btn-view" href="product.html#p-homies-crew-sweatshirt">View Product</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 3 -->
+      <article class="card">
+        <div class="media">
+          <img src="assets/images/products/future-icon.jpg" alt="Future Icon Script Sweatshirt" style="--px:36%;--z:1.55;--ox:50%;--oy:8%" loading="lazy" decoding="async">
+          <span class="badge">New</span>
+          <a class="quick" href="product.html#p-future-icon-sweatshirt">Quick View</a>
+        </div>
+        <button type="button" class="heart" data-wishlist-id="p-future-icon-sweatshirt" aria-label="Toggle Future Icon Script Sweatshirt in wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+          </svg>
+        </button>
+        <div class="card-body">
+          <p class="cat">Sweatshirts</p>
+          <h3><a href="product.html#p-future-icon-sweatshirt">Future Icon Script Sweatshirt</a></h3>
+          <div class="card-footer">
+            <span class="price">₹1,349</span>
+            <a class="btn-view" href="product.html#p-future-icon-sweatshirt">View Product</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 4 -->
+      <article class="card">
+        <div class="media">
+          <img src="assets/images/products/rookie-crew.jpg" alt="Rookie Crew Co-ord Set" style="--px:50%;--py:50%" loading="lazy" decoding="async">
+          <span class="badge">New</span>
+          <a class="quick" href="product.html#p-rookie-crew-coord">Quick View</a>
+        </div>
+        <button type="button" class="heart" data-wishlist-id="p-rookie-crew-coord" aria-label="Toggle Rookie Crew Co-ord Set in wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+          </svg>
+        </button>
+        <div class="card-body">
+          <p class="cat">Co-ord Sets</p>
+          <h3><a href="product.html#p-rookie-crew-coord">Rookie Crew Co-ord Set</a></h3>
+          <div class="card-footer">
+            <span class="price">₹2,399</span>
+            <a class="btn-view" href="product.html#p-rookie-crew-coord">View Product</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6 – Best Sellers -->
+<section class="section" aria-label="Best Sellers">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Most Loved</p>
+        <h2 class="section-title">Best Sellers</h2>
+      </div>
+      <a class="link-arrow" href="shop.html">Shop All Best Sellers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="grid grid-4">
+      <!-- Best Seller 1 -->
+      <article class="card">
+        <div class="media">
+          <img src="assets/images/products/happy-gang.jpg" alt="Happy Gang Script Sweatshirt" style="--px:48%;--z:1.55;--ox:50%;--oy:8%" loading="lazy" decoding="async">
+          <span class="badge">Best Seller</span>
+          <a class="quick" href="product.html#p-happy-gang-sweatshirt">Quick View</a>
+        </div>
+        <button type="button" class="heart" data-wishlist-id="p-happy-gang-sweatshirt" aria-label="Toggle Happy Gang Script Sweatshirt in wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+          </svg>
+        </button>
+        <div class="card-body">
+          <p class="cat">Sweatshirts</p>
+          <h3><a href="product.html#p-happy-gang-sweatshirt">Happy Gang Script Sweatshirt</a></h3>
+          <div class="card-footer">
+            <span class="price">₹1,299</span>
+            <a class="btn-view" href="product.html#p-happy-gang-sweatshirt">View Product</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Best Seller 2 -->
+      <article class="card">
+        <div class="media">
+          <img src="assets/images/products/rookie-crew.jpg" alt="Rookie Crew Script Sweatshirt" style="--px:48%;--z:1.55;--ox:50%;--oy:8%" loading="lazy" decoding="async">
+          <span class="badge">Best Seller</span>
+          <a class="quick" href="product.html#p-rookie-crew-sweatshirt">Quick View</a>
+        </div>
+        <button type="button" class="heart" data-wishlist-id="p-rookie-crew-sweatshirt" aria-label="Toggle Rookie Crew Script Sweatshirt in wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+          </svg>
+        </button>
+        <div class="card-body">
+          <p class="cat">Sweatshirts</p>
+          <h3><a href="product.html#p-rookie-crew-sweatshirt">Rookie Crew Script Sweatshirt</a></h3>
+          <div class="card-footer">
+            <span class="price">₹1,299</span>
+            <a class="btn-view" href="product.html#p-rookie-crew-sweatshirt">View Product</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Best Seller 3 -->
+      <article class="card">
+        <div class="media">
+          <img src="assets/images/products/happy-gang.jpg" alt="Navy Utility Cargo Jogger" style="--px:70%;--z:2.0;--ox:50%;--oy:96%" loading="lazy" decoding="async">
+          <span class="badge">Best Seller</span>
+          <a class="quick" href="product.html#p-navy-cargo-jogger">Quick View</a>
+        </div>
+        <button type="button" class="heart" data-wishlist-id="p-navy-cargo-jogger" aria-label="Toggle Navy Utility Cargo Jogger in wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+          </svg>
+        </button>
+        <div class="card-body">
+          <p class="cat">Trousers &amp; Joggers</p>
+          <h3><a href="product.html#p-navy-cargo-jogger">Navy Utility Cargo Jogger</a></h3>
+          <div class="card-footer">
+            <span class="price">₹1,199</span>
+            <a class="btn-view" href="product.html#p-navy-cargo-jogger">View Product</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Best Seller 4 -->
+      <article class="card">
+        <div class="media">
+          <img src="assets/images/products/homies-crew.jpg" alt="Homies Crew Co-ord Set" style="--px:64%;--py:50%" loading="lazy" decoding="async">
+          <span class="badge">Top Rated</span>
+          <a class="quick" href="product.html#p-homies-crew-coord">Quick View</a>
+        </div>
+        <button type="button" class="heart" data-wishlist-id="p-homies-crew-coord" aria-label="Toggle Homies Crew Co-ord Set in wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+          </svg>
+        </button>
+        <div class="card-body">
+          <p class="cat">Co-ord Sets</p>
+          <h3><a href="product.html#p-homies-crew-coord">Homies Crew Co-ord Set</a></h3>
+          <div class="card-footer">
+            <span class="price">₹2,399</span>
+            <a class="btn-view" href="product.html#p-homies-crew-coord">View Product</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Section 7 – Fashion Campaign Banner -->
+<section class="promo" aria-label="Fashion Campaign Banner">
+  <div class="promo-copy">
+    <p class="eyebrow">The Script Campaign</p>
+    <h2 class="display">STYLE THAT SPEAKS.</h2>
+    <p>Designed for individuality. Made for everyday confidence.</p>
+    <a class="btn light" href="collections.html">EXPLORE COLLECTION</a>
+  </div>
+  <div class="promo-img">
+    <img src="assets/images/banners/script-edit-banner.jpg" alt="Boy in a cocoa brown Wild Bunch script sweatshirt" style="object-position:50% 40%" loading="lazy" decoding="async">
+  </div>
+</section>
+
+<!-- Section 8 – Brand Introduction -->
+<section class="section" aria-label="Brand Introduction">
+  <div class="wrap split">
+    <div class="frame">
+      <img src="assets/images/banners/brand-story.jpg" alt="Boy leaning on a wooden studio box in a Rookie Crew butter cream sweatshirt" style="object-position:50% 50%" loading="lazy" decoding="async">
+    </div>
+    <div class="copy">
+      <p class="eyebrow">About the Brand</p>
+      <h2 class="section-title">MORE THAN EVERYDAY BASICS.</h2>
+      <p>Inspired by global fashion and driven by a love for distinctive design, THE YOUTH LABEL creates stylish, versatile boyswear for ages 3–14.</p>
+      <p>We bring a fresh edge to boys’ fashion with thoughtfully designed collections that combine distinctive fabrics, modern colours, unique textures, and trend-inspired designs. We go beyond everyday basics to celebrate individuality, confidence, and effortless style.</p>
+      <a class="link-arrow" href="about.html">Our Full Story <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 9 – Why Choose Us -->
+<section class="section tint" aria-label="Why Choose Us">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Why Choose Us</p>
+      <h2 class="section-title">Boyswear with a Fresh Edge</h2>
+    </div>
+    <ul class="why why-3">
+      <li>
+        <span class="num">01</span>
+        <h3>Distinctive Designs</h3>
+        <p>Thoughtfully designed pieces featuring raised script embroidery, custom knit textures, and statement silhouettes crafted specifically for boys.</p>
+      </li>
+      <li>
+        <span class="num">02</span>
+        <h3>Modern Collections</h3>
+        <p>Curated seasonal palettes from smoke grey and butter cream to cocoa brown and slate blue, inspired by contemporary global trends.</p>
+      </li>
+      <li>
+        <span class="num">03</span>
+        <h3>Everyday Style</h3>
+        <p>Effortless versatility designed for boys aged 3–14 that seamlessly transitions from school and play to weekend gatherings with all-day comfort.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Section 10 – Newsletter -->
+<section class="newsletter" id="newsletter" aria-label="Newsletter Subscription">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--smoke-400)">Newsletter</p>
+    <h2>Join the Label</h2>
+    <p>Be the first to see new collections and style updates from THE YOUTH LABEL.</p>
+    <form class="news-form" id="newsletter-form" novalidate>
+      <input type="email" id="news-email" placeholder="Your email address" aria-label="Email address" required>
+      <button type="submit" class="btn">Subscribe</button>
+    </form>
+    <div class="news-feedback" id="news-feedback" role="alert" aria-live="polite"></div>
+  </div>
+</section>
+
+</main>
+
+<!-- Section 11 – Footer -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo" aria-label="THE YOUTH LABEL">
+        <img src="assets/images/logo/the-youth-label-logo.png" alt="THE YOUTH LABEL" class="site-logo-footer">
+      </a>
+      <p>Stylish, versatile boyswear for ages 3–14. For the Youth That Leads.</p>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="shop.html#tshirts">T-Shirts</a></li>
+        <li><a href="shop.html#shirts">Shirts</a></li>
+        <li><a href="shop.html#joggers">Trousers &amp; Joggers</a></li>
+        <li><a href="shop.html#coords">Co-ord Sets</a></li>
+        <li><a href="shop.html#new">New Arrivals</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="account.html">My Account</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact Information</h4>
+      <ul class="contact-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>
+          <a href="tel:+918838666712">+91 8838666712</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>
+          <a href="mailto:support.theyouthlabel@gmail.com">support.theyouthlabel@gmail.com</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.4-4A8 8 0 1 1 8 18.6L4 20z"/><path d="M9 10c.5 2.5 2.5 4.5 5 5l1.2-1.4-2-1-1 .8c-.8-.4-1.6-1.2-2-2l.8-1-1-2L9 10z"/></svg>
+          <a href="https://wa.me/918838666712" target="_blank" rel="noopener">WhatsApp: +91 8838666712</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap">
+      <span>© 2026 THE YOUTH LABEL. For the Youth That Leads. All rights reserved.</span>
+      <span>Premium Boyswear · Ages 3–14</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Shared Vanilla JavaScript -->
+<script src="js/main.js"></script>
+</body>
+</html>

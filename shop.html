@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SHOP ALL | THE YOUTH LABEL — Boys’ Fashion Ages 3–14</title>
+<meta name="description" content="Discover distinctive styles for the next generation. Shop t-shirts, shirts, joggers, co-ord sets, and new arrivals from THE YOUTH LABEL.">
+<link rel="icon" href="assets/images/logo/the-youth-label-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announce">DISCOVER THE LATEST COLLECTION – THE YOUTH LABEL</div>
+
+<!-- Navigation Header -->
+<header class="site-header">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+  <div class="wrap header-inner">
+    <label for="nav-toggle" class="burger" aria-label="Open menu"><span></span></label>
+    
+    <a class="logo" href="index.html" aria-label="THE YOUTH LABEL – home">
+      <img src="assets/images/logo/the-youth-label-logo.png" alt="THE YOUTH LABEL" class="site-logo">
+    </a>
+
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <a href="shop.html" class="dropdown-trigger active" aria-haspopup="true" aria-expanded="false">
+          <span>Shop</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="dropdown-menu" role="menu" aria-label="Shop Categories">
+          <a href="shop.html#tshirts" class="dropdown-link" role="menuitem">T-Shirts</a>
+          <a href="shop.html#shirts" class="dropdown-link" role="menuitem">Shirts</a>
+          <a href="shop.html#joggers" class="dropdown-link" role="menuitem">Trousers &amp; Joggers</a>
+          <a href="shop.html#coords" class="dropdown-link" role="menuitem">Co-ord Sets</a>
+          <a href="shop.html#new" class="dropdown-link dropdown-highlight" role="menuitem">New Arrivals</a>
+        </div>
+      </div>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="icons">
+      <a class="icon-btn" href="account.html" aria-label="My Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>
+        </svg>
+      </a>
+      <a class="icon-btn" href="wishlist.html" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+        </svg>
+        <span class="count wishlist-count">4</span>
+      </a>
+      <a class="icon-btn" href="cart.html" aria-label="Shopping Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 8h14l-1 12H6L5 8z"/>
+          <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+        </svg>
+        <span class="count cart-count">3</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Shop Page Heading -->
+  <section class="page-hero shop-hero">
+    <div class="wrap shop-hero-wrap">
+      <p class="crumbs"><a href="index.html">Home</a><span>/</span>Shop</p>
+      <span class="shop-badge-label">THE YOUTH LABEL COLLECTION</span>
+      <h1 class="shop-main-heading">SHOP ALL</h1>
+      <p class="shop-subheading">Discover distinctive styles for the next generation.</p>
+    </div>
+  </section>
+
+  <!-- Product Category Navigation -->
+  <nav class="cat-nav" aria-label="Product Categories" id="category-nav">
+    <div class="wrap cat-nav-wrap">
+      <button type="button" class="cat-tab active" data-filter="all" data-cat="all">All Products <span class="badge-count">8</span></button>
+      <button type="button" class="cat-tab" data-filter="tshirts" data-cat="tshirts">T-Shirts <span class="badge-count">2</span></button>
+      <button type="button" class="cat-tab" data-filter="shirts" data-cat="shirts">Shirts <span class="badge-count">2</span></button>
+      <button type="button" class="cat-tab" data-filter="joggers" data-cat="joggers">Trousers &amp; Joggers <span class="badge-count">2</span></button>
+      <button type="button" class="cat-tab" data-filter="coords" data-cat="coords">Co-ord Sets <span class="badge-count">2</span></button>
+      <button type="button" class="cat-tab" data-filter="new" data-cat="new">New Arrivals <span class="badge-count">2</span></button>
+    </div>
+  </nav>
+
+  <!-- Product Filtering & Sorting Controls Toolbar -->
+  <section class="shop-controls-section">
+    <div class="wrap shop-controls">
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" id="shop-search" placeholder="Search products by name..." aria-label="Search products by name">
+        <button type="button" id="clear-search" class="clear-btn" aria-label="Clear search" style="display:none">&times;</button>
+      </div>
+      <div class="sort-box">
+        <label for="shop-sort" class="sort-label">Sort by:</label>
+        <select id="shop-sort" class="sort-select" aria-label="Sort products">
+          <option value="featured">Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="newest">Newest</option>
+        </select>
+      </div>
+      <div class="results-count" id="results-count">
+        Showing <span>8</span> products
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Grid Section -->
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      
+      <!-- Unified E-commerce Product Grid -->
+      <div class="grid grid-4" id="shop-grid">
+        
+        <!-- 1. Essential Crew T-Shirt -->
+        <article class="card" data-id="p-essential-crew-tshirt" data-category="tshirts" data-price="599" data-name="Essential Crew T-Shirt" data-new="false" data-date="2026-01-20">
+          <div class="media">
+            <img src="assets/images/products/geometric-print-tshirt.jpg" alt="Essential Crew T-Shirt – Geometric Print" style="object-position:50% 25%" loading="lazy" decoding="async">
+            <button type="button" class="quick-add-btn" data-product-id="p-essential-crew-tshirt" data-product-name="Essential Crew T-Shirt" aria-label="Quick add Essential Crew T-Shirt to cart">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/><path d="M12 11v6M9 14h6"/></svg>
+              Quick Add
+            </button>
+          </div>
+          <button type="button" class="heart" data-wishlist-id="p-essential-crew-tshirt" aria-label="Toggle Essential Crew T-Shirt in wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+            </svg>
+          </button>
+          <div class="card-body">
+            <div class="card-meta">
+              <p class="cat">T-Shirts</p>
+              <div class="color-badge" title="Colour: Geometric Print">
+                <span class="color-dot" style="background:#2b3846"></span>
+                <span class="color-text">Geometric Print</span>
+              </div>
+            </div>
+            <h3><a href="product.html#p-essential-crew-tshirt">Essential Crew T-Shirt</a></h3>
+            <div class="card-footer">
+              <span class="price">₹599</span>
+              <div class="card-actions">
+                <a class="btn-view" href="product.html#p-essential-crew-tshirt">View Product</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. Textured Knit T-Shirt -->
+        <article class="card" data-id="p-textured-knit-tshirt" data-category="tshirts" data-price="699" data-name="Textured Knit T-Shirt" data-new="false" data-date="2026-01-22">
+          <div class="media">
+            <img src="assets/images/products/animal-graphic-tshirt.jpg" alt="Textured Knit T-Shirt – Animal Graphic" style="object-position:50% 50%" loading="lazy" decoding="async">
+            <button type="button" class="quick-add-btn" data-product-id="p-textured-knit-tshirt" data-product-name="Textured Knit T-Shirt" aria-label="Quick add Textured Knit T-Shirt to cart">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/><path d="M12 11v6M9 14h6"/></svg>
+              Quick Add
+            </button>
+          </div>
+          <button type="button" class="heart" data-wishlist-id="p-textured-knit-tshirt" aria-label="Toggle Textured Knit T-Shirt in wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+            </svg>
+          </button>
+          <div class="card-body">
+            <div class="card-meta">
+              <p class="cat">T-Shirts</p>
+              <div class="color-badge" title="Colour: Butter Yellow">
+                <span class="color-dot" style="background:#f9dd7b"></span>
+                <span class="color-text">Butter Yellow</span>
+              </div>
+            </div>
+            <h3><a href="product.html#p-textured-knit-tshirt">Textured Knit T-Shirt</a></h3>
+            <div class="card-footer">
+              <span class="price">₹699</span>
+              <div class="card-actions">
+                <a class="btn-view" href="product.html#p-textured-knit-tshirt">View Product</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8. Classic Button-Down Shirt -->
+        <article class="card" data-id="p-classic-button-shirt" data-category="shirts" data-price="999" data-name="Classic Button-Down Shirt" data-new="false" data-date="2026-01-25">
+          <div class="media">
+            <img src="assets/images/products/grey-plaid-overshirt.jpg" alt="Classic Button-Down Shirt – Grey Plaid Flannel" style="object-position:50% 25%" loading="lazy" decoding="async">
+            <button type="button" class="quick-add-btn" data-product-id="p-classic-button-shirt" data-product-name="Classic Button-Down Shirt" aria-label="Quick add Classic Button-Down Shirt to cart">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/><path d="M12 11v6M9 14h6"/></svg>
+              Quick Add
+            </button>
+          </div>
+          <button type="button" class="heart" data-wishlist-id="p-classic-button-shirt" aria-label="Toggle Classic Button-Down Shirt in wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+            </svg>
+          </button>
+          <div class="card-body">
+            <div class="card-meta">
+              <p class="cat">Shirts</p>
+              <div class="color-badge" title="Colour: Grey Plaid">
+                <span class="color-dot" style="background:#7d828a"></span>
+                <span class="color-text">Grey Plaid</span>
+              </div>
+            </div>
+            <h3><a href="product.html#p-classic-button-shirt">Classic Button-Down Shirt</a></h3>
+            <div class="card-footer">
+              <span class="price">₹999</span>
+              <div class="card-actions">
+                <a class="btn-view" href="product.html#p-classic-button-shirt">View Product</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9. Casual Pattern Shirt -->
+        <article class="card" data-id="p-casual-pattern-shirt" data-category="shirts" data-price="1099" data-name="Casual Pattern Shirt" data-new="false" data-date="2026-01-28">
+          <div class="media">
+            <img src="assets/images/products/black-denim-shirt.jpg" alt="Casual Pattern Shirt – Black Utility" style="object-position:50% 20%" loading="lazy" decoding="async">
+            <button type="button" class="quick-add-btn" data-product-id="p-casual-pattern-shirt" data-product-name="Casual Pattern Shirt" aria-label="Quick add Casual Pattern Shirt to cart">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/><path d="M12 11v6M9 14h6"/></svg>
+              Quick Add
+            </button>
+          </div>
+          <button type="button" class="heart" data-wishlist-id="p-casual-pattern-shirt" aria-label="Toggle Casual Pattern Shirt in wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+            </svg>
+          </button>
+          <div class="card-body">
+            <div class="card-meta">
+              <p class="cat">Shirts</p>
+              <div class="color-badge" title="Colour: Washed Black">
+                <span class="color-dot" style="background:#1a1a1a"></span>
+                <span class="color-text">Washed Black</span>
+              </div>
+            </div>
+            <h3><a href="product.html#p-casual-pattern-shirt">Casual Pattern Shirt</a></h3>
+            <div class="card-footer">
+              <span class="price">₹1,099</span>
+              <div class="card-actions">
+                <a class="btn-view" href="product.html#p-casual-pattern-shirt">View Product</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10. Navy Utility Cargo Jogger -->
+        <article class="card" data-id="p-navy-cargo-jogger" data-category="joggers" data-price="1199" data-name="Navy Utility Cargo Jogger" data-new="false" data-date="2026-02-15">
+          <div class="media">
+            <img src="assets/images/products/happy-gang.jpg" alt="Navy Utility Cargo Jogger" style="--px:70%;--z:2.0;--ox:50%;--oy:96%" loading="lazy" decoding="async">
+            <span class="badge">Best Seller</span>
+            <button type="button" class="quick-add-btn" data-product-id="p-navy-cargo-jogger" data-product-name="Navy Utility Cargo Jogger" aria-label="Quick add Navy Utility Cargo Jogger to cart">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/><path d="M12 11v6M9 14h6"/></svg>
+              Quick Add
+            </button>
+          </div>
+          <button type="button" class="heart" data-wishlist-id="p-navy-cargo-jogger" aria-label="Toggle Navy Utility Cargo Jogger in wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+            </svg>
+          </button>
+          <div class="card-body">
+            <div class="card-meta">
+              <p class="cat">Trousers &amp; Joggers</p>
+              <div class="color-badge" title="Colour: Deep Navy">
+                <span class="color-dot" style="background:#1d2434"></span>
+                <span class="color-text">Deep Navy</span>
+              </div>
+            </div>
+            <h3><a href="product.html#p-navy-cargo-jogger">Navy Utility Cargo Jogger</a></h3>
+            <div class="card-footer">
+              <span class="price">₹1,199</span>
+              <div class="card-actions">
+                <a class="btn-view" href="product.html#p-navy-cargo-jogger">View Product</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 11. Navy Cargo Jogger – Relaxed Fit -->
+        <article class="card" data-id="p-navy-cargo-jogger-2" data-category="joggers" data-price="1249" data-name="Navy Cargo Jogger – Relaxed Fit" data-new="false" data-date="2026-02-18">
+          <div class="media">
+            <img src="assets/images/products/future-icon.jpg" alt="Navy Cargo Jogger – Relaxed Fit" style="--px:70%;--z:2.0;--ox:50%;--oy:95%" loading="lazy" decoding="async">
+            <button type="button" class="quick-add-btn" data-product-id="p-navy-cargo-jogger-2" data-product-name="Navy Cargo Jogger – Relaxed Fit" aria-label="Quick add Navy Cargo Jogger – Relaxed Fit to cart">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/><path d="M12 11v6M9 14h6"/></svg>
+              Quick Add
+            </button>
+          </div>
+          <button type="button" class="heart" data-wishlist-id="p-navy-cargo-jogger-2" aria-label="Toggle Navy Cargo Jogger – Relaxed Fit in wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+            </svg>
+          </button>
+          <div class="card-body">
+            <div class="card-meta">
+              <p class="cat">Trousers &amp; Joggers</p>
+              <div class="color-badge" title="Colour: Midnight Navy">
+                <span class="color-dot" style="background:#151c28"></span>
+                <span class="color-text">Midnight Navy</span>
+              </div>
+            </div>
+            <h3><a href="product.html#p-navy-cargo-jogger-2">Navy Cargo Jogger – Relaxed Fit</a></h3>
+            <div class="card-footer">
+              <span class="price">₹1,249</span>
+              <div class="card-actions">
+                <a class="btn-view" href="product.html#p-navy-cargo-jogger-2">View Product</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 12. Rookie Crew Co-ord Set -->
+        <article class="card" data-id="p-rookie-crew-coord" data-category="coords new" data-price="2399" data-name="Rookie Crew Co-ord Set" data-new="true" data-date="2026-03-04">
+          <div class="media">
+            <img src="assets/images/products/rookie-crew.jpg" alt="Rookie Crew Co-ord Set" style="--px:50%;--py:50%" loading="lazy" decoding="async">
+            <span class="badge">New Arrival</span>
+            <button type="button" class="quick-add-btn" data-product-id="p-rookie-crew-coord" data-product-name="Rookie Crew Co-ord Set" aria-label="Quick add Rookie Crew Co-ord Set to cart">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/><path d="M12 11v6M9 14h6"/></svg>
+              Quick Add
+            </button>
+          </div>
+          <button type="button" class="heart" data-wishlist-id="p-rookie-crew-coord" aria-label="Toggle Rookie Crew Co-ord Set in wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+            </svg>
+          </button>
+          <div class="card-body">
+            <div class="card-meta">
+              <p class="cat">Co-ord Sets</p>
+              <div class="color-badge" title="Colour: Butter Cream & Navy">
+                <span class="color-dot" style="background:#f3ede2"></span>
+                <span class="color-text">Cream &amp; Navy</span>
+              </div>
+            </div>
+            <h3><a href="product.html#p-rookie-crew-coord">Rookie Crew Co-ord Set</a></h3>
+            <div class="card-footer">
+              <span class="price">₹2,399</span>
+              <div class="card-actions">
+                <a class="btn-view" href="product.html#p-rookie-crew-coord">View Product</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 13. Homies Crew Co-ord Set -->
+        <article class="card" data-id="p-homies-crew-coord" data-category="coords new" data-price="2499" data-name="Homies Crew Co-ord Set" data-new="true" data-date="2026-03-05">
+          <div class="media">
+            <img src="assets/images/products/homies-crew.jpg" alt="Homies Crew Co-ord Set" style="--px:64%;--py:50%" loading="lazy" decoding="async">
+            <span class="badge">New Arrival</span>
+            <button type="button" class="quick-add-btn" data-product-id="p-homies-crew-coord" data-product-name="Homies Crew Co-ord Set" aria-label="Quick add Homies Crew Co-ord Set to cart">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/><path d="M12 11v6M9 14h6"/></svg>
+              Quick Add
+            </button>
+          </div>
+          <button type="button" class="heart" data-wishlist-id="p-homies-crew-coord" aria-label="Toggle Homies Crew Co-ord Set in wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+            </svg>
+          </button>
+          <div class="card-body">
+            <div class="card-meta">
+              <p class="cat">Co-ord Sets</p>
+              <div class="color-badge" title="Colour: Slate Blue & Navy">
+                <span class="color-dot" style="background:#546a7b"></span>
+                <span class="color-text">Slate &amp; Navy</span>
+              </div>
+            </div>
+            <h3><a href="product.html#p-homies-crew-coord">Homies Crew Co-ord Set</a></h3>
+            <div class="card-footer">
+              <span class="price">₹2,499</span>
+              <div class="card-actions">
+                <a class="btn-view" href="product.html#p-homies-crew-coord">View Product</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Empty Filter State -->
+      <div id="shop-empty" class="shop-empty" role="status">
+        <div class="shop-empty-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M8 11h6"/></svg>
+        </div>
+        <h3>No matching products found</h3>
+        <p>We couldn’t find any styles matching your current filters or search term. Try adjusting your search or clear all filters.</p>
+        <button type="button" class="btn" id="clear-filters-btn">Clear All Filters</button>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- Professional Footer -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo" aria-label="THE YOUTH LABEL">
+        <img src="assets/images/logo/the-youth-label-logo.png" alt="THE YOUTH LABEL" class="site-logo-footer">
+      </a>
+      <p>Stylish, versatile boyswear for ages 3–14. For the Youth That Leads.</p>
+    </div>
+    <div>
+      <h4>Shop Categories</h4>
+      <ul>
+        <li><a href="shop.html#tshirts">T-Shirts</a></li>
+        <li><a href="shop.html#shirts">Shirts</a></li>
+        <li><a href="shop.html#joggers">Trousers &amp; Joggers</a></li>
+        <li><a href="shop.html#coords">Co-ord Sets</a></li>
+        <li><a href="shop.html#new">New Arrivals</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="account.html">My Account</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact Information</h4>
+      <ul class="contact-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>
+          <a href="tel:+918838666712">+91 8838666712</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>
+          <a href="mailto:support.theyouthlabel@gmail.com">support.theyouthlabel@gmail.com</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.4-4A8 8 0 1 1 8 18.6L4 20z"/><path d="M9 10c.5 2.5 2.5 4.5 5 5l1.2-1.4-2-1-1 .8c-.8-.4-1.6-1.2-2-2l.8-1-1-2L9 10z"/></svg>
+          <a href="https://wa.me/918838666712" target="_blank" rel="noopener">WhatsApp: +91 8838666712</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap">
+      <span>© 2026 THE YOUTH LABEL. For the Youth That Leads. All rights reserved.</span>
+      <span>Premium Boyswear · Ages 3–14</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Shared Vanilla JavaScript -->
+<script src="js/main.js"></script>
+</body>
+</html>

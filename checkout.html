@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout | THE YOUTH LABEL — Premium Boyswear</title>
+<meta name="description" content="Secure checkout at THE YOUTH LABEL. Premium fashion for boys aged 3–14. For the Youth That Leads.">
+<link rel="icon" href="assets/images/logo/the-youth-label-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announce">DISCOVER THE LATEST COLLECTION – THE YOUTH LABEL</div>
+
+<!-- Navigation Header -->
+<header class="site-header">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+  <div class="wrap header-inner">
+    <label for="nav-toggle" class="burger" aria-label="Open menu"><span></span></label>
+    
+    <a class="logo" href="index.html" aria-label="THE YOUTH LABEL – home">
+      <img src="assets/images/logo/the-youth-label-logo.png" alt="THE YOUTH LABEL" class="site-logo">
+    </a>
+
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <a href="shop.html" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+          <span>Shop</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="dropdown-menu" role="menu" aria-label="Shop Categories">
+          <a href="shop.html#tshirts" class="dropdown-link" role="menuitem">T-Shirts</a>
+          <a href="shop.html#shirts" class="dropdown-link" role="menuitem">Shirts</a>
+          <a href="shop.html#joggers" class="dropdown-link" role="menuitem">Trousers &amp; Joggers</a>
+          <a href="shop.html#coords" class="dropdown-link" role="menuitem">Co-ord Sets</a>
+          <a href="shop.html#new" class="dropdown-link dropdown-highlight" role="menuitem">New Arrivals</a>
+        </div>
+      </div>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <div class="icons">
+      <a class="icon-btn" href="account.html" aria-label="My Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>
+        </svg>
+      </a>
+      <a class="icon-btn" href="wishlist.html" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 20.5s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9.5c0 6-8 11-8 11z"/>
+        </svg>
+        <span class="count wishlist-count">4</span>
+      </a>
+      <a class="icon-btn" href="cart.html" aria-label="Shopping Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 8h14l-1 12H6L5 8z"/>
+          <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+        </svg>
+        <span class="count cart-count">3</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- Page Hero Banner -->
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><a href="cart.html">Cart</a><span>/</span><span aria-current="page">Checkout</span>
+    </nav>
+    <h1>Checkout</h1>
+    <p>Provide your delivery and contact details to complete your order.</p>
+  </div>
+</section>
+
+<div class="wrap layout">
+  <!-- Main Form Area -->
+  <div>
+    <!-- 4-Step Checkout Progress Indicator -->
+    <ol class="steps" aria-label="Checkout progress">
+      <li class="done"><span>Cart</span></li>
+      <li class="current"><span>Details &amp; Delivery</span></li>
+      <li class="current"><span>Payment</span></li>
+      <li class=""><span>Confirmation</span></li>
+    </ol>
+
+    <form id="checkout-form" novalidate>
+      <!-- 1. Customer Details Section -->
+      <div class="panel">
+        <h2>1. Customer Details</h2>
+        <div class="form-grid">
+          <div class="field full" id="field-cust-name">
+            <label for="cust-name">Full Name <span style="color:#ef4444">*</span></label>
+            <input id="cust-name" type="text" autocomplete="name" placeholder="Enter your full name" required>
+            <span class="field-error">Please enter your full name (minimum 2 characters).</span>
+          </div>
+          <div class="field" id="field-cust-email">
+            <label for="cust-email">Email Address <span style="color:#ef4444">*</span></label>
+            <input id="cust-email" type="email" autocomplete="email" placeholder="name@example.com" required>
+            <span class="field-error">Please enter a valid email address.</span>
+          </div>
+          <div class="field" id="field-cust-phone">
+            <label for="cust-phone">Mobile Number <span style="color:#ef4444">*</span></label>
+            <input id="cust-phone" type="tel" autocomplete="tel" placeholder="10-digit mobile number" maxlength="10" required>
+            <span class="field-error">Please enter a valid 10-digit mobile number.</span>
+          </div>
+          <div class="field full" id="field-cust-alt-phone">
+            <label for="cust-alt-phone">Alternative Phone Number <span class="muted">(Optional)</span></label>
+            <input id="cust-alt-phone" type="tel" autocomplete="tel" placeholder="Optional alternative phone number">
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Delivery Address Section -->
+      <div class="panel" style="margin-top:28px">
+        <h2>2. Delivery Address</h2>
+        <div class="form-grid">
+          <div class="field" id="field-addr-house">
+            <label for="addr-house">House / Flat / Building No. <span style="color:#ef4444">*</span></label>
+            <input id="addr-house" type="text" placeholder="Flat 402, Building A" required>
+            <span class="field-error">Please enter house or flat number.</span>
+          </div>
+          <div class="field" id="field-addr-street">
+            <label for="addr-street">Street Address <span style="color:#ef4444">*</span></label>
+            <input id="addr-street" type="text" autocomplete="street-address" placeholder="12th Main Road, Cross Street" required>
+            <span class="field-error">Please enter street address.</span>
+          </div>
+          <div class="field" id="field-addr-area">
+            <label for="addr-area">Area / Locality <span style="color:#ef4444">*</span></label>
+            <input id="addr-area" type="text" placeholder="Indiranagar / Sector 4" required>
+            <span class="field-error">Please enter area or locality.</span>
+          </div>
+          <div class="field" id="field-addr-city">
+            <label for="addr-city">City <span style="color:#ef4444">*</span></label>
+            <input id="addr-city" type="text" autocomplete="address-level2" placeholder="City" required>
+            <span class="field-error">Please enter city name.</span>
+          </div>
+          <div class="field" id="field-addr-state">
+            <label for="addr-state">State <span style="color:#ef4444">*</span></label>
+            <select id="addr-state" autocomplete="address-level1" required>
+              <option value="" selected disabled>Select state</option>
+              <option>Andhra Pradesh</option>
+              <option>Arunachal Pradesh</option>
+              <option>Assam</option>
+              <option>Bihar</option>
+              <option>Chhattisgarh</option>
+              <option>Goa</option>
+              <option>Gujarat</option>
+              <option>Haryana</option>
+              <option>Himachal Pradesh</option>
+              <option>Jharkhand</option>
+              <option>Karnataka</option>
+              <option>Kerala</option>
+              <option>Madhya Pradesh</option>
+              <option>Maharashtra</option>
+              <option>Manipur</option>
+              <option>Meghalaya</option>
+              <option>Mizoram</option>
+              <option>Nagaland</option>
+              <option>Odisha</option>
+              <option>Punjab</option>
+              <option>Rajasthan</option>
+              <option>Sikkim</option>
+              <option>Tamil Nadu</option>
+              <option>Telangana</option>
+              <option>Tripura</option>
+              <option>Uttar Pradesh</option>
+              <option>Uttarakhand</option>
+              <option>West Bengal</option>
+              <option>Delhi</option>
+              <option>Chandigarh</option>
+              <option>Puducherry</option>
+            </select>
+            <span class="field-error">Please select your state.</span>
+          </div>
+          <div class="field" id="field-addr-pin">
+            <label for="addr-pin">PIN Code <span style="color:#ef4444">*</span></label>
+            <input id="addr-pin" type="text" inputmode="numeric" maxlength="6" autocomplete="postal-code" placeholder="6-digit PIN code" required>
+            <span class="field-error">Please enter a valid 6-digit PIN code.</span>
+          </div>
+          <div class="field full" id="field-addr-landmark">
+            <label for="addr-landmark">Landmark <span class="muted">(Optional)</span></label>
+            <input id="addr-landmark" type="text" placeholder="Near landmark, park or landmark store">
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Payment Method Section -->
+      <div class="panel pay" style="margin-top:28px">
+        <h2>3. Payment Method</h2>
+
+        <!-- Informational Notice regarding Payment Gateway Integration -->
+        <div class="payment-notice-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <div>
+            <strong>Payment Notice:</strong> Online payment gateway integration is currently pending for this release. You can place your order via <strong>Cash on Delivery (Pay on Delivery)</strong>. Demonstration mode options for UPI and Cards are also available for interface preview without charging any card or bank account.
+          </div>
+        </div>
+
+        <input type="radio" name="pay-method" id="pay-cod" value="Cash on Delivery" checked>
+        <input type="radio" name="pay-method" id="pay-upi" value="UPI (Demo Preview)">
+        <input type="radio" name="pay-method" id="pay-card" value="Card (Demo Preview)">
+        <input type="radio" name="pay-method" id="pay-nb" value="Net Banking (Demo Preview)">
+
+        <div class="methods">
+          <label for="pay-cod">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="1"/><circle cx="12" cy="12" r="2.6"/></svg>
+            Cash on Delivery
+            <small>Pay on arrival (Active)</small>
+          </label>
+          <label for="pay-upi">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg>
+            UPI
+            <small>Integration pending</small>
+          </label>
+          <label for="pay-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="1.5"/><path d="M2.5 10h19M6 15h4"/></svg>
+            Card
+            <small>Integration pending</small>
+          </label>
+          <label for="pay-nb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-5 9 5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/></svg>
+            Net Banking
+            <small>Integration pending</small>
+          </label>
+        </div>
+
+        <div class="panels">
+          <div class="pay-panel" id="panel-cod">
+            <p class="note" style="margin:0;font-size:13.5px;color:var(--ink)">
+              <strong>Pay on Delivery selected.</strong> You can pay in cash or via UPI QR code when your package is delivered to your doorstep. Standard shipping dispatched within 24 hours.
+            </p>
+          </div>
+          <div class="pay-panel" id="panel-upi">
+            <div class="form-grid">
+              <div class="field full">
+                <label for="upi-id">Virtual UPI ID <span class="muted">(Preview only)</span></label>
+                <input id="upi-id" type="text" placeholder="username@bank">
+              </div>
+            </div>
+            <p class="muted" style="font-size:12.5px;margin-top:10px">Interface demonstration only — payment gateway integration pending. No request sent.</p>
+          </div>
+          <div class="pay-panel" id="panel-card">
+            <div class="form-grid">
+              <div class="field full">
+                <label for="card-num">Card Number <span class="muted">(Preview only)</span></label>
+                <input id="card-num" type="text" inputmode="numeric" placeholder="•••• •••• •••• ••••" autocomplete="off">
+              </div>
+              <div class="field">
+                <label for="card-exp">Expiry (MM / YY)</label>
+                <input id="card-exp" type="text" placeholder="MM / YY" autocomplete="off">
+              </div>
+              <div class="field">
+                <label for="card-cvv">CVV</label>
+                <input id="card-cvv" type="password" maxlength="4" placeholder="•••" autocomplete="off">
+              </div>
+            </div>
+            <p class="muted" style="font-size:12.5px;margin-top:10px">Interface demonstration only — do not enter real card details. Gateway integration in progress.</p>
+          </div>
+          <div class="pay-panel" id="panel-nb">
+            <div class="form-grid">
+              <div class="field full">
+                <label for="nb-bank">Select Bank <span class="muted">(Preview only)</span></label>
+                <select id="nb-bank">
+                  <option value="" selected disabled>Select your bank</option>
+                  <option>State Bank of India</option>
+                  <option>HDFC Bank</option>
+                  <option>ICICI Bank</option>
+                  <option>Axis Bank</option>
+                  <option>Kotak Mahindra Bank</option>
+                </select>
+              </div>
+            </div>
+            <p class="muted" style="font-size:12.5px;margin-top:10px">Interface demonstration only.</p>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top:24px">
+        <a class="link-arrow" href="cart.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="transform:rotate(180deg)" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+          Back to Cart
+        </a>
+      </p>
+  </div>
+
+  <!-- Dynamic Order Summary Sidebar -->
+  <aside class="summary" aria-label="Order summary">
+    <h2>Order Summary</h2>
+    <ul class="sum-items" id="checkout-sum-items">
+      <!-- Populated dynamically from localStorage tyl_cart_items by js/main.js -->
+    </ul>
+    <div class="sum-row">
+      <span>Subtotal</span>
+      <span id="checkout-subtotal">₹0</span>
+    </div>
+    <div class="sum-row">
+      <span>Delivery</span>
+      <span class="muted" style="color:#16a34a;font-weight:600">FREE Standard</span>
+    </div>
+    <div class="sum-row total">
+      <span>Total Amount</span>
+      <span id="checkout-total">₹0</span>
+    </div>
+
+    <!-- Place Order Action Button -->
+    <button type="submit" id="place-order-btn" class="btn block" style="margin-top:20px;font-size:13px;letter-spacing:0.14em">Place Order</button>
+    <p class="small">By placing your order, you confirm your shipping and contact information. An order reference number will be generated on submission.</p>
+  </aside>
+  </form>
+</div>
+</main>
+
+<!-- Professional Site Footer -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo" aria-label="THE YOUTH LABEL">
+        <img src="assets/images/logo/the-youth-label-logo.png" alt="THE YOUTH LABEL" class="site-logo-footer">
+      </a>
+      <p class="footer-tagline">Stylish, versatile boyswear for ages 3–14. For the Youth That Leads.</p>
+      <div class="brand-palette">
+        <span class="palette-chip palette-smoke" title="Smoke Grey"></span>
+        <span class="palette-chip palette-black" title="Black"></span>
+        <span class="palette-chip palette-white" title="White"></span>
+      </div>
+    </div>
+    <div>
+      <h4>Shop Categories</h4>
+      <ul>
+        <li><a href="shop.html#tshirts">T-Shirts</a></li>
+        <li><a href="shop.html#shirts">Shirts</a></li>
+        <li><a href="shop.html#joggers">Trousers &amp; Joggers</a></li>
+        <li><a href="shop.html#coords">Co-ord Sets</a></li>
+        <li><a href="shop.html#new">New Arrivals</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="account.html">My Account</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact Information</h4>
+      <ul class="contact-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>
+          <a href="tel:+918838666712">+91 8838666712</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>
+          <a href="mailto:support.theyouthlabel@gmail.com">support.theyouthlabel@gmail.com</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.4-4A8 8 0 1 1 8 18.6L4 20z"/><path d="M9 10c.5 2.5 2.5 4.5 5 5l1.2-1.4-2-1-1 .8c-.8-.4-1.6-1.2-2-2l.8-1-1-2L9 10z"/></svg>
+          <a href="https://wa.me/918838666712" target="_blank" rel="noopener">WhatsApp: +91 8838666712</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap">
+      <span>© 2026 THE YOUTH LABEL. For the Youth That Leads. All rights reserved.</span>
+      <span>Premium Boyswear · Ages 3–14</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Shared Vanilla JavaScript -->
+<script src="js/main.js"></script>
+</body>
+</html>
