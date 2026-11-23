@@ -1061,12 +1061,6 @@ button, input, select, textarea {
   width: 36px;
 }
 
-.hero-quick-bar {
-  background: var(--white);
-  border-top: 1px solid var(--smoke-200);
-  padding: 10px 0;
-}
-
 @keyframes rise {
   from {
     opacity: 0;
@@ -5407,27 +5401,6 @@ a.c-card:hover {
 
   .hero-dot.active {
     width: 28px;
-  }
-
-  .hero-quick-bar .wrap {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-    padding: 14px 0;
-  }
-
-  .hero-quick-bar .wrap > div {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .hero-quick-bar .btn {
-    flex: 1;
-    min-width: 140px;
-    text-align: center;
-    padding: 0 16px;
-    font-size: 11px;
   }
 }
 

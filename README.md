@@ -17,3 +17,4 @@ A premium, modern boyswear e-commerce website for boys aged 3–14 years, built 
 - **HTML5**: Semantic structure and accessible markup
 - **CSS3**: Custom variables, Flexbox, Grid, fluid typography, and responsive media queries
 - **Vanilla JavaScript**: Zero external dependencies or frameworks
+
