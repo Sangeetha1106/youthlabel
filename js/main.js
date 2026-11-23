@@ -2120,9 +2120,10 @@
         const isMobile = window.innerWidth <= 900;
         if (isMobile) {
           e.preventDefault();
-          dropdownWrap.classList.toggle('mobile-open');
-          const isExpanded = dropdownWrap.classList.contains('mobile-open');
-          dropdownTrigger.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+          const willOpen = !dropdownWrap.classList.contains('mobile-open');
+          dropdownWrap.classList.toggle('mobile-open', willOpen);
+          dropdownWrap.classList.toggle('is-open', willOpen);
+          dropdownTrigger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
         }
       });
 
