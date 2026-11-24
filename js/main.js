@@ -2420,7 +2420,7 @@
   }
 
   // ---------------------------------------------------------------------------
-  // 11. Homepage Hero Banner Slider
+  // 11. Homepage Hero Banner Slider & Campaign Switcher
   // ---------------------------------------------------------------------------
   function initHeroSlider() {
     const slider = document.getElementById('hero-slider');
@@ -2531,6 +2531,260 @@
   }
 
   // ---------------------------------------------------------------------------
+  // 11b. Redesigned Editorial Hero Campaign Switcher
+  // ---------------------------------------------------------------------------
+  function initHeroCampaign() {
+    const stage = document.getElementById('hero-campaign-stage');
+    if (!stage) return;
+
+    const slides = Array.from(stage.querySelectorAll('.hero-campaign-slide'));
+    const switchBtns = Array.from(document.querySelectorAll('.hero-look-btn'));
+    if (!slides.length) return;
+
+    let currentIndex = 0;
+    let timer = null;
+    const intervalMs = 6000;
+
+    function goToSlide(idx) {
+      if (idx < 0) idx = slides.length - 1;
+      if (idx >= slides.length) idx = 0;
+      currentIndex = idx;
+
+      slides.forEach(function (slide, i) {
+        if (i === currentIndex) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+
+      switchBtns.forEach(function (btn, i) {
+        if (i === currentIndex) {
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+        } else {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-selected', 'false');
+        }
+      });
+    }
+
+    function startTimer() {
+      stopTimer();
+      timer = setInterval(function () {
+        goToSlide(currentIndex + 1);
+      }, intervalMs);
+    }
+
+    function stopTimer() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    switchBtns.forEach(function (btn, idx) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        goToSlide(idx);
+        startTimer();
+      });
+    });
+
+    const heroCampaign = document.querySelector('.hero-campaign');
+    if (heroCampaign) {
+      heroCampaign.addEventListener('mouseenter', stopTimer);
+      heroCampaign.addEventListener('mouseleave', startTimer);
+    }
+
+    startTimer();
+  }
+
+  // ---------------------------------------------------------------------------
+  // 11c. Fits in Motion Horizontal Showcase Reel
+  // ---------------------------------------------------------------------------
+  function initMotionReel() {
+    const reel = document.getElementById('motion-reel');
+    const prevBtn = document.getElementById('motion-prev');
+    const nextBtn = document.getElementById('motion-next');
+
+    if (!reel) return;
+
+    const scrollAmount = 350;
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        reel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        reel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      });
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // 11d. The Youth Play Zone (Streetwear Fit Lab Interaction)
+  // ---------------------------------------------------------------------------
+  function initFitLab() {
+    const fitLab = document.getElementById('fit-lab-stage');
+    if (!fitLab) return;
+
+    const tabs = Array.from(document.querySelectorAll('.fit-lab-tab'));
+    const imgEl = document.getElementById('fit-lab-image');
+    const codeEl = document.getElementById('fit-vibe-code');
+    const titleEl = document.getElementById('fit-vibe-title');
+    const descEl = document.getElementById('fit-vibe-desc');
+    const swatchesEl = document.getElementById('fit-swatches');
+    const piecesEl = document.getElementById('fit-pieces-list');
+    const ctaEl = document.getElementById('fit-cta');
+
+    const VIBES = {
+      urban: {
+        code: 'VIBE 01 // URBAN DRIFT',
+        title: 'The Street Drift Look',
+        desc: 'Layered urban aesthetics with relaxed plaid proportions, breathable white cotton layer, and high-mobility black cargo pants.',
+        image: 'assets/images/products/grey-plaid-overshirt.jpg',
+        swatches: [
+          { name: 'Smoke Grey', bg: '#cfccc5', color: '#181716' },
+          { name: 'Matte Black', bg: '#181716', color: '#ffffff' },
+          { name: 'Crisp White', bg: '#ffffff', color: '#181716', border: '1px solid #cfccc5' }
+        ],
+        pieces: [
+          { name: 'Classic Button-Down Shirt', spec: 'Grey Plaid · ₹999', link: 'product.html#p-classic-button-shirt' },
+          { name: 'Essential Crew T-Shirt', spec: 'Geometric Print · ₹599', link: 'product.html#p-essential-crew-tshirt' },
+          { name: 'Navy Utility Cargo Jogger', spec: 'Navy Relaxed · ₹1,199', link: 'product.html#p-navy-cargo-jogger' }
+        ],
+        ctaLink: 'shop.html#shirts'
+      },
+      varsity: {
+        code: 'VIBE 02 // VARSITY CLUB',
+        title: 'The Varsity Club Look',
+        desc: 'Bold preppy streetwear energy combining an iconic letterman bomber, butter cream script sweatshirt, and tailored cargo joggers.',
+        image: 'assets/images/banners/home-hero-banner-2.jpg',
+        swatches: [
+          { name: 'Butter Cream', bg: '#eae6df', color: '#181716' },
+          { name: 'Varsity Black', bg: '#181716', color: '#ffffff' },
+          { name: 'Heritage White', bg: '#ffffff', color: '#181716', border: '1px solid #cfccc5' }
+        ],
+        pieces: [
+          { name: 'Rookie Crew Script Sweatshirt', spec: 'Butter Cream · ₹1,299', link: 'product.html#p-rookie-crew-sweatshirt' },
+          { name: 'Navy Utility Cargo Jogger', spec: 'Navy Relaxed · ₹1,199', link: 'product.html#p-navy-cargo-jogger' },
+          { name: 'Homies Crew Script Sweatshirt', spec: 'Slate Blue · ₹1,399', link: 'product.html#p-homies-crew-sweatshirt' }
+        ],
+        ctaLink: 'shop.html#sweatshirts'
+      },
+      minimal: {
+        code: 'VIBE 03 // MINIMAL CHILL',
+        title: 'The Minimal Chill Look',
+        desc: 'Warm earth tones and tactile French terry for low-key weekend hangs, effortless studio style, and zero-fuss comfort.',
+        image: 'assets/images/products/rookie-crew.jpg',
+        swatches: [
+          { name: 'Butter Cream', bg: '#f2f0ec', color: '#181716' },
+          { name: 'Taupe Grey', bg: '#cfccc5', color: '#181716' },
+          { name: 'Cocoa Brown', bg: '#5a4638', color: '#ffffff' }
+        ],
+        pieces: [
+          { name: 'Rookie Crew Script Sweatshirt', spec: 'Butter Cream · ₹1,299', link: 'product.html#p-rookie-crew-sweatshirt' },
+          { name: 'Wild Bunch Script Sweatshirt', spec: 'Cocoa Brown · ₹1,399', link: 'product.html#p-wild-bunch-sweatshirt' },
+          { name: 'Navy Cargo Jogger – Relaxed Fit', spec: 'Deep Navy · ₹1,249', link: 'product.html#p-navy-cargo-jogger-2' }
+        ],
+        ctaLink: 'product.html#p-rookie-crew-sweatshirt'
+      },
+      black: {
+        code: 'VIBE 04 // ALL-BLACK HERO',
+        title: 'The All-Black Hero Look',
+        desc: 'Monochrome confidence featuring washed black denim shirt, subtle typography tee, utility cargo jogger, and sleek sunglasses.',
+        image: 'assets/images/products/black-denim-shirt.jpg',
+        swatches: [
+          { name: 'Washed Black', bg: '#2b2a29', color: '#ffffff' },
+          { name: 'Matte Charcoal', bg: '#181716', color: '#ffffff' },
+          { name: 'Graphite', bg: '#3f3d3a', color: '#ffffff' }
+        ],
+        pieces: [
+          { name: 'Casual Pattern Shirt', spec: 'Washed Black · ₹1,099', link: 'product.html#p-casual-pattern-shirt' },
+          { name: 'Future Icon Script Sweatshirt', spec: 'Sage Grey · ₹1,349', link: 'product.html#p-future-icon-sweatshirt' },
+          { name: 'Navy Utility Cargo Jogger', spec: 'Navy Relaxed · ₹1,199', link: 'product.html#p-navy-cargo-jogger' }
+        ],
+        ctaLink: 'shop.html#shirts'
+      }
+    };
+
+    function applyVibe(vibeKey) {
+      const data = VIBES[vibeKey];
+      if (!data) return;
+
+      // Update active tab
+      tabs.forEach(function (tab) {
+        if (tab.getAttribute('data-vibe') === vibeKey) {
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+        } else {
+          tab.classList.remove('active');
+          tab.setAttribute('aria-selected', 'false');
+        }
+      });
+
+      // Smooth visual transition
+      if (imgEl) {
+        imgEl.style.opacity = '0';
+        imgEl.style.transform = 'scale(0.98)';
+        setTimeout(function () {
+          imgEl.src = data.image;
+          imgEl.alt = data.title;
+          imgEl.style.opacity = '1';
+          imgEl.style.transform = 'scale(1)';
+        }, 180);
+      }
+
+      // Update text details
+      if (codeEl) codeEl.textContent = data.code;
+      if (titleEl) titleEl.textContent = data.title;
+      if (descEl) descEl.textContent = data.desc;
+
+      // Update swatches
+      if (swatchesEl) {
+        swatchesEl.innerHTML = data.swatches.map(function (s) {
+          const borderStyle = s.border ? 'border:' + s.border + ';' : '';
+          return '<span class="swatch-pill" style="background:' + s.bg + ';color:' + (s.color || '#181716') + ';' + borderStyle + '">' + s.name + '</span>';
+        }).join('');
+      }
+
+      // Update pieces list
+      if (piecesEl) {
+        piecesEl.innerHTML = data.pieces.map(function (p, idx) {
+          const num = '0' + (idx + 1);
+          return '<div class="fit-piece-item">' +
+            '<span class="piece-icon">' + num + '</span>' +
+            '<div class="piece-info">' +
+              '<strong>' + p.name + '</strong>' +
+              '<span>' + p.spec + '</span>' +
+            '</div>' +
+            '<a href="' + p.link + '" class="piece-link">View</a>' +
+          '</div>';
+        }).join('');
+      }
+
+      // Update CTA link
+      if (ctaEl) {
+        ctaEl.setAttribute('href', data.ctaLink);
+      }
+    }
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function (e) {
+        e.preventDefault();
+        const vibe = tab.getAttribute('data-vibe');
+        if (vibe) applyVibe(vibe);
+      });
+    });
+  }
+
+  // ---------------------------------------------------------------------------
   // Initialize on DOMContentLoaded
   // ---------------------------------------------------------------------------
   function initAll() {
@@ -2553,6 +2807,9 @@
     initNav();
     initProductDetails();
     initHeroSlider();
+    initHeroCampaign();
+    initMotionReel();
+    initFitLab();
   }
 
   if (document.readyState === 'loading') {
