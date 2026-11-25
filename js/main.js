@@ -2531,7 +2531,111 @@
   }
 
   // ---------------------------------------------------------------------------
-  // 11b. Redesigned Editorial Hero Campaign Switcher
+  // 11b. Energetic Playful Hero Campaign (ODDAY Inspiration)
+  // ---------------------------------------------------------------------------
+  function initHeroPlayful() {
+    const heroSection = document.getElementById('hero-playful');
+    if (!heroSection) return;
+
+    const cards = Array.from(heroSection.querySelectorAll('.hero-model-card'));
+    const lookBtns = Array.from(heroSection.querySelectorAll('.mobile-look-btn'));
+    if (!cards.length) return;
+
+    let activeIndex = 1; // default to Look 02 (cool center model)
+    let autoRotateTimer = null;
+
+    function setActiveLook(index) {
+      activeIndex = (index + cards.length) % cards.length;
+
+      cards.forEach(function (card, i) {
+        if (i === activeIndex) {
+          card.classList.add('is-focused');
+        } else {
+          card.classList.remove('is-focused');
+        }
+      });
+
+      lookBtns.forEach(function (btn, i) {
+        if (i === activeIndex) {
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+        } else {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-selected', 'false');
+        }
+      });
+    }
+
+    // Set initial focus
+    setActiveLook(1);
+
+    // Interactive button clicks
+    lookBtns.forEach(function (btn, i) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        setActiveLook(i);
+        stopAutoRotate();
+      });
+    });
+
+    // Model card click to bring front
+    cards.forEach(function (card, i) {
+      card.addEventListener('click', function () {
+        setActiveLook(i);
+        stopAutoRotate();
+      });
+    });
+
+    // Auto rotate fits on mobile / small screens
+    function startAutoRotate() {
+      if (window.innerWidth <= 960 && !autoRotateTimer) {
+        autoRotateTimer = setInterval(function () {
+          setActiveLook((activeIndex + 1) % cards.length);
+        }, 4500);
+      }
+    }
+
+    function stopAutoRotate() {
+      if (autoRotateTimer) {
+        clearInterval(autoRotateTimer);
+        autoRotateTimer = null;
+      }
+    }
+
+    startAutoRotate();
+
+    heroSection.addEventListener('mouseenter', stopAutoRotate);
+    heroSection.addEventListener('mouseleave', function () {
+      if (window.innerWidth <= 960) startAutoRotate();
+    });
+
+    // Subtle desktop mouse parallax on decorative elements
+    const blob1 = heroSection.querySelector('.bg-blob-1');
+    const blob2 = heroSection.querySelector('.bg-blob-2');
+
+    if (window.innerWidth > 960) {
+      heroSection.addEventListener('mousemove', function (e) {
+        const rect = heroSection.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+        if (blob1) {
+          blob1.style.transform = 'translate(' + (x * 24) + 'px, ' + (y * 24) + 'px)';
+        }
+        if (blob2) {
+          blob2.style.transform = 'translate(' + (-x * 20) + 'px, ' + (-y * 20) + 'px)';
+        }
+      });
+
+      heroSection.addEventListener('mouseleave', function () {
+        if (blob1) blob1.style.transform = '';
+        if (blob2) blob2.style.transform = '';
+      });
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // 11b-legacy. Hero Campaign Switcher (Fallback for legacy markup)
   // ---------------------------------------------------------------------------
   function initHeroCampaign() {
     const stage = document.getElementById('hero-campaign-stage');
@@ -2807,6 +2911,7 @@
     initNav();
     initProductDetails();
     initHeroSlider();
+    initHeroPlayful();
     initHeroCampaign();
     initMotionReel();
     initFitLab();

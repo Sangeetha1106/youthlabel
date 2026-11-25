@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>THE YOUTH LABEL | Premium Boys’ Fashion — For the Youth That Leads</title>
 <meta name="description" content="THE YOUTH LABEL – Contemporary, premium boys' fashion for ages 3–14. Designed for confidence, individuality and everyday adventures. For the Youth That Leads.">
-<link rel="icon" href="assets/images/logo/the-youth-label-logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/images/logo/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/images/logo/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -81,90 +83,23 @@
 <main id="main">
 
   <!-- =========================================================================
-       SECTION 3: HERO SECTION – FASHION CAMPAIGN
+       HOME BANNER – "Kinetic Wall": endlessly scrolling photo columns (CSS only, pauses on hover)
        ========================================================================= -->
-  <section class="hero-campaign" aria-label="Fashion Campaign Hero">
-    <div class="hero-campaign-stage" id="hero-campaign-stage">
-      
-      <!-- Slide 1: The Urban Varsity -->
-      <div class="hero-campaign-slide active" data-slide="0" role="group" aria-roledescription="slide" aria-label="1 of 2: The Urban Varsity">
-        <div class="hero-campaign-bg">
-          <img src="assets/images/banners/home-hero-banner-2.jpg" alt="Boy in modern varsity bomber jacket on architectural steps" class="hero-campaign-img" fetchpriority="high">
-          <div class="hero-campaign-overlay"></div>
-        </div>
-        <div class="wrap hero-campaign-content">
-          <div class="hero-campaign-meta">
-            <span class="hero-badge-tag">CAMPAIGN 01 // AUTUMN-WINTER 2026</span>
-            <span class="hero-badge-dot">•</span>
-            <span class="hero-badge-tag">AGES 3–14</span>
-          </div>
-          <h1 class="hero-campaign-title">
-            <span class="hero-title-line">NOT JUST FASHION.</span>
-            <span class="hero-title-line accent-serif">A GENERATION OF STYLE.</span>
-          </h1>
-          <p class="hero-campaign-desc">
-            Discover a new expression of boys' fashion. Designed for confidence, individuality and everyday adventures.
-          </p>
-          <div class="hero-campaign-actions">
-            <a href="shop.html" class="btn btn-campaign-primary">
-              <span>EXPLORE COLLECTION</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="shop.html#new" class="btn btn-campaign-ghost">NEW ARRIVALS</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 2: The Street Hoodie -->
-      <div class="hero-campaign-slide" data-slide="1" role="group" aria-roledescription="slide" aria-label="2 of 2: The Street Hoodie">
-        <div class="hero-campaign-bg">
-          <img src="assets/images/banners/home-hero-banner.jpg" alt="Boy in black urban streetwear hoodie with sunglasses" class="hero-campaign-img" loading="lazy">
-          <div class="hero-campaign-overlay"></div>
-        </div>
-        <div class="wrap hero-campaign-content">
-          <div class="hero-campaign-meta">
-            <span class="hero-badge-tag">LOOKBOOK EDIT // CORE STREETWEAR</span>
-            <span class="hero-badge-dot">•</span>
-            <span class="hero-badge-tag">FOR THE YOUTH THAT LEADS</span>
-          </div>
-          <div class="hero-campaign-title">
-            <span class="hero-title-line">BUILT FOR CONFIDENCE.</span>
-            <span class="hero-title-line accent-serif">STYLED TO STAND OUT.</span>
-          </div>
-          <p class="hero-campaign-desc">
-            Distinctive cuts, premium heavyweight cottons, and elevated streetwear silhouettes engineered for modern youth.
-          </p>
-          <div class="hero-campaign-actions">
-            <a href="shop.html" class="btn btn-campaign-primary">
-              <span>EXPLORE COLLECTION</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="shop.html#shirts" class="btn btn-campaign-ghost">VIEW SHIRTS</a>
-          </div>
-        </div>
-      </div>
-
+  <section class="kc" id="home-banner" aria-label="Featured collection">
+    <div class="kc-copy">
+      <p class="kc-eyebrow"><i></i>Boys&rsquo; Fashion &middot; Ages 3&ndash;14</p>
+      <h1 class="kc-title"><span class="l"><i>For the</i></span><span class="l"><i class="fill">Youth</i></span><span class="l"><i>That Leads.</i></span></h1>
+      <p class="kc-sub">Distinctive textures, modern colours and trend-inspired styles &ndash; made for boys who stand out.</p>
+      <div class="kc-actions"><a class="kc-btn" href="shop.html">Shop Now <span aria-hidden="true">&rarr;</span></a><a class="kc-btn ghost" href="shop.html#new">New Arrivals</a></div>
+      <ul class="kc-chips" aria-label="Shop by category"><li><a href="shop.html#sweatshirts">Sweatshirts</a></li><li><a href="shop.html#joggers">Joggers</a></li><li><a href="shop.html#coords">Co-ords</a></li><li><a href="shop.html#shirts">Shirts</a></li></ul>
     </div>
-
-    <!-- Editorial Campaign Switcher -->
-    <div class="wrap hero-campaign-footer">
-      <div class="hero-look-switcher" role="tablist" aria-label="Campaign Look Selector">
-        <button type="button" class="hero-look-btn active" role="tab" aria-selected="true" data-switch="0">
-          <span class="look-num">01</span>
-          <span class="look-label">THE URBAN VARSITY</span>
-        </button>
-        <button type="button" class="hero-look-btn" role="tab" aria-selected="false" data-switch="1">
-          <span class="look-num">02</span>
-          <span class="look-label">THE STREET HOODIE</span>
-        </button>
-      </div>
-      <div class="hero-campaign-tagline">
-        <span>THE YOUTH LABEL</span>
-        <span class="sep">/</span>
-        <span>FOR THE YOUTH THAT LEADS</span>
-      </div>
-    </div>
+    <div class="kc-wall" aria-label="Featured products"><div class="kc-col c1"><div class="kc-track"><a class="kc-card" href="product.html#p-happy-gang-sweatshirt"><img src="assets/images/banners/hd/happy-full.jpg" alt="Happy Gang Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Happy Gang Sweatshirt</b><i>&#8377;1,299</i></span></a><a class="kc-card" href="product.html#p-wild-bunch-sweatshirt"><img src="assets/images/banners/hd/wild-upper.jpg" alt="Wild Bunch Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Wild Bunch Sweatshirt</b><i>&#8377;1,399</i></span></a><a class="kc-card" href="product.html#p-navy-cargo-jogger-2"><img src="assets/images/banners/hd/future-lower.jpg" alt="Navy Cargo Jogger" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Navy Cargo Jogger</b><i>&#8377;1,249</i></span></a><a class="kc-card" href="product.html#p-rookie-crew-sweatshirt"><img src="assets/images/banners/hd/rookie-upper.jpg" alt="Rookie Crew Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Rookie Crew Sweatshirt</b><i>&#8377;1,299</i></span></a><a class="kc-card" href="product.html#p-homies-crew-sweatshirt"><img src="assets/images/banners/hd/homies-mid.jpg" alt="Homies Crew Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Homies Crew Sweatshirt</b><i>&#8377;1,399</i></span></a><span class="kc-dup" aria-hidden="true"><a class="kc-card" href="product.html#p-happy-gang-sweatshirt" tabindex="-1"><img src="assets/images/banners/hd/happy-full.jpg" alt="Happy Gang Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Happy Gang Sweatshirt</b><i>&#8377;1,299</i></span></a><a class="kc-card" href="product.html#p-wild-bunch-sweatshirt" tabindex="-1"><img src="assets/images/banners/hd/wild-upper.jpg" alt="Wild Bunch Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Wild Bunch Sweatshirt</b><i>&#8377;1,399</i></span></a><a class="kc-card" href="product.html#p-navy-cargo-jogger-2" tabindex="-1"><img src="assets/images/banners/hd/future-lower.jpg" alt="Navy Cargo Jogger" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Navy Cargo Jogger</b><i>&#8377;1,249</i></span></a><a class="kc-card" href="product.html#p-rookie-crew-sweatshirt" tabindex="-1"><img src="assets/images/banners/hd/rookie-upper.jpg" alt="Rookie Crew Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Rookie Crew Sweatshirt</b><i>&#8377;1,299</i></span></a><a class="kc-card" href="product.html#p-homies-crew-sweatshirt" tabindex="-1"><img src="assets/images/banners/hd/homies-mid.jpg" alt="Homies Crew Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Homies Crew Sweatshirt</b><i>&#8377;1,399</i></span></a></span></div></div><div class="kc-col c2"><div class="kc-track"><a class="kc-card" href="product.html#p-rookie-crew-coord"><img src="assets/images/banners/hd/rookie-full.jpg" alt="Rookie Crew Co-ord" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Rookie Crew Co-ord</b><i>&#8377;2,399</i></span></a><a class="kc-card" href="product.html#p-future-icon-sweatshirt"><img src="assets/images/banners/hd/future-upper.jpg" alt="Future Icon Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Future Icon Sweatshirt</b><i>&#8377;1,349</i></span></a><a class="kc-card" href="product.html#p-homies-crew-sweatshirt"><img src="assets/images/banners/hd/homies-upper.jpg" alt="Homies Crew Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Homies Crew Sweatshirt</b><i>&#8377;1,399</i></span></a><a class="kc-card" href="product.html#p-navy-cargo-jogger"><img src="assets/images/banners/hd/happy-lower.jpg" alt="Navy Cargo Jogger" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Navy Cargo Jogger</b><i>&#8377;1,199</i></span></a><a class="kc-card" href="product.html#p-wild-bunch-sweatshirt"><img src="assets/images/banners/hd/wild-full.jpg" alt="Wild Bunch Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Wild Bunch Sweatshirt</b><i>&#8377;1,399</i></span></a><span class="kc-dup" aria-hidden="true"><a class="kc-card" href="product.html#p-rookie-crew-coord" tabindex="-1"><img src="assets/images/banners/hd/rookie-full.jpg" alt="Rookie Crew Co-ord" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Rookie Crew Co-ord</b><i>&#8377;2,399</i></span></a><a class="kc-card" href="product.html#p-future-icon-sweatshirt" tabindex="-1"><img src="assets/images/banners/hd/future-upper.jpg" alt="Future Icon Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Future Icon Sweatshirt</b><i>&#8377;1,349</i></span></a><a class="kc-card" href="product.html#p-homies-crew-sweatshirt" tabindex="-1"><img src="assets/images/banners/hd/homies-upper.jpg" alt="Homies Crew Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Homies Crew Sweatshirt</b><i>&#8377;1,399</i></span></a><a class="kc-card" href="product.html#p-navy-cargo-jogger" tabindex="-1"><img src="assets/images/banners/hd/happy-lower.jpg" alt="Navy Cargo Jogger" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Navy Cargo Jogger</b><i>&#8377;1,199</i></span></a><a class="kc-card" href="product.html#p-wild-bunch-sweatshirt" tabindex="-1"><img src="assets/images/banners/hd/wild-full.jpg" alt="Wild Bunch Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Wild Bunch Sweatshirt</b><i>&#8377;1,399</i></span></a></span></div></div><div class="kc-col c3"><div class="kc-track"><a class="kc-card" href="product.html#p-future-icon-sweatshirt"><img src="assets/images/banners/hd/future-full.jpg" alt="Future Icon Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Future Icon Sweatshirt</b><i>&#8377;1,349</i></span></a><a class="kc-card" href="product.html#p-happy-gang-sweatshirt"><img src="assets/images/banners/hd/happy-upper.jpg" alt="Happy Gang Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Happy Gang Sweatshirt</b><i>&#8377;1,299</i></span></a><a class="kc-card" href="product.html#p-wild-bunch-sweatshirt"><img src="assets/images/banners/hd/wild-mid.jpg" alt="Wild Bunch Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Wild Bunch Sweatshirt</b><i>&#8377;1,399</i></span></a><a class="kc-card" href="product.html#p-rookie-crew-sweatshirt"><img src="assets/images/banners/hd/rookie-lower.jpg" alt="Rookie Crew Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Rookie Crew Sweatshirt</b><i>&#8377;1,299</i></span></a><a class="kc-card" href="product.html#p-homies-crew-coord"><img src="assets/images/banners/hd/homies-full.jpg" alt="Homies Crew Co-ord" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Homies Crew Co-ord</b><i>&#8377;2,499</i></span></a><span class="kc-dup" aria-hidden="true"><a class="kc-card" href="product.html#p-future-icon-sweatshirt" tabindex="-1"><img src="assets/images/banners/hd/future-full.jpg" alt="Future Icon Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Future Icon Sweatshirt</b><i>&#8377;1,349</i></span></a><a class="kc-card" href="product.html#p-happy-gang-sweatshirt" tabindex="-1"><img src="assets/images/banners/hd/happy-upper.jpg" alt="Happy Gang Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Happy Gang Sweatshirt</b><i>&#8377;1,299</i></span></a><a class="kc-card" href="product.html#p-wild-bunch-sweatshirt" tabindex="-1"><img src="assets/images/banners/hd/wild-mid.jpg" alt="Wild Bunch Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Wild Bunch Sweatshirt</b><i>&#8377;1,399</i></span></a><a class="kc-card" href="product.html#p-rookie-crew-sweatshirt" tabindex="-1"><img src="assets/images/banners/hd/rookie-lower.jpg" alt="Rookie Crew Sweatshirt" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Rookie Crew Sweatshirt</b><i>&#8377;1,299</i></span></a><a class="kc-card" href="product.html#p-homies-crew-coord" tabindex="-1"><img src="assets/images/banners/hd/homies-full.jpg" alt="Homies Crew Co-ord" width="1000" height="1333" loading="eager" decoding="async"><span class="kc-chip"><b>Homies Crew Co-ord</b><i>&#8377;2,499</i></span></a></span></div></div></div>
+    <div class="kc-seal" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="kc-circ" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"/></defs>
+      <g class="kc-spin"><circle cx="100" cy="100" r="98" fill="#fff"/><text font-size="14.5" font-weight="700" letter-spacing="2" fill="#0e0e0e"><textPath href="#kc-circ" textLength="470" lengthAdjust="spacing">SCROLL THE LOOKBOOK &#10022; THE YOUTH LABEL &#10022; </textPath></text></g>
+      <circle cx="100" cy="100" r="40" fill="#0e0e0e"/><path d="M100 84v32M86 104l14 14 14-14" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
   </section>
+  <div class="bn-ticker" aria-hidden="true"><div class="bn-track"><span>For the Youth That Leads</span><span>Boyswear for ages 3&ndash;14</span><span>Script Sweatshirts</span><span>Cargo Joggers</span><span>Co-ord Sets</span><span>New Arrivals</span><span>For the Youth That Leads</span><span>Boyswear for ages 3&ndash;14</span><span>Script Sweatshirts</span><span>Cargo Joggers</span><span>Co-ord Sets</span><span>New Arrivals</span></div></div>
+
 
   <!-- =========================================================================
        SECTION 4: BRAND INTRODUCTION – MORE THAN JUST CLOTHING
