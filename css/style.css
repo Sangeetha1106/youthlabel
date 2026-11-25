@@ -8825,3 +8825,92 @@ a.c-card:hover {
   .kc-sub { font-size: 15px; }
 }
 @media (prefers-reduced-motion: reduce) { .kc *, .kc::before { animation: none !important; } .kc-title .l i { transform: none; } .kc-title .fill { background-size: 100% 100%; } }
+
+
+/* ==========================================================================
+   HOME BANNER v4 — colour-wipe slider  (prefix: hb- / sl-)
+   ========================================================================== */
+.hb { position: relative; overflow: hidden; background: #111; --hb-fg: #fff; --hb-bg: #111; height: min(820px, max(660px, 54vw)); }
+.hb-stage { position: absolute; inset: 0; }
+.sl { position: absolute; inset: 0; background: var(--bg); color: var(--fg); visibility: hidden; z-index: 1; clip-path: circle(0% at 76% 56%); }
+.sl.is-leaving { visibility: visible; z-index: 2; clip-path: circle(150% at 76% 56%); }
+.sl.is-active { visibility: visible; z-index: 3; clip-path: circle(150% at 76% 56%); transition: clip-path 1.15s cubic-bezier(.77, 0, .18, 1); }
+.sl-num { position: absolute; left: 2.5vw; bottom: -4.5vw; font: 800 clamp(200px, 26vw, 420px)/1 var(--sans); letter-spacing: -.06em; color: var(--fg); opacity: .07; pointer-events: none; }
+.sl-copy { position: absolute; z-index: 5; left: clamp(24px, 5vw, 84px); top: 50%; transform: translateY(-54%); width: 52%; }
+.sl-eyebrow { display: flex; align-items: center; gap: 12px; font-size: 11px; letter-spacing: .26em; text-transform: uppercase; font-weight: 700; opacity: .85; margin-bottom: 24px; }
+.sl-eyebrow i { width: 40px; height: 2px; background: var(--ac); }
+.sl-title { font: 800 clamp(44px, 5.7vw, 100px)/.92 var(--sans); letter-spacing: -.045em; text-transform: uppercase; margin: 0; }
+.sl-title .ln { display: block; overflow: hidden; padding: .03em 0 .07em; }
+.sl-title .ln i { display: inline-block; font-style: normal; }
+.sl-title .ac { color: var(--ac); }
+.sl-sub { margin: 24px 0 32px; max-width: 40ch; font-size: 16px; opacity: .85; }
+.sl-actions { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.sl-btn { position: relative; overflow: hidden; z-index: 0; display: inline-flex; align-items: center; gap: 12px; height: 56px; padding: 0 32px; background: var(--ac); color: #111;
+  font: 800 12px/1 var(--sans); letter-spacing: .18em; text-transform: uppercase; box-shadow: 6px 6px 0 var(--fg); transition: transform .3s var(--ease), box-shadow .3s var(--ease); }
+.sl-btn:hover { transform: translate(4px, 4px); box-shadow: 2px 2px 0 var(--fg); }
+.sl-btn span { display: inline-block; transition: transform .35s var(--ease); } .sl-btn:hover span { transform: translateX(6px); }
+.sl-link { font: 800 12px/1 var(--sans); letter-spacing: .18em; text-transform: uppercase; padding-bottom: 5px; border-bottom: 2px solid currentColor; }
+.sl-link:hover { opacity: .6; }
+
+/* slanted photo panel */
+.sl-stripe { position: absolute; z-index: 2; top: 0; bottom: 0; right: 0; width: 58%; background: var(--ac); clip-path: polygon(22% 0, 100% 0, 100% 100%, 5% 100%); }
+.sl-photo { position: absolute; z-index: 3; top: 0; bottom: 0; right: 0; width: 54%; display: block; overflow: hidden; background: rgba(0,0,0,.2); clip-path: polygon(19% 0, 100% 0, 100% 100%, 0 100%); }
+.sl-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; }
+.sl-card { position: absolute; z-index: 6; right: clamp(24px, 4vw, 64px); bottom: clamp(24px, 4vw, 56px); display: grid; gap: 2px; min-width: 220px; padding: 15px 20px; background: #fff; color: #111;
+  box-shadow: 0 20px 44px -16px rgba(0,0,0,.55); border-left: 5px solid var(--ac); }
+.sl-card small { font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: #77736b; font-weight: 700; }
+.sl-card b { font: 800 18px/1.2 var(--sans); letter-spacing: -.01em; } .sl-card span { font-size: 14px; font-weight: 700; }
+.sl-card i { font-style: normal; display: inline-block; transition: transform .35s var(--ease); } .sl-card:hover i { transform: translateX(6px); }
+
+/* entrance animation (re-runs each time a slide becomes active) */
+.sl .rv { opacity: 0; transform: translateY(46px); }
+.sl-title .ln i.rv { transform: translateY(110%); opacity: 1; }
+.sl.is-active .rv { opacity: 1; transform: none; transition: transform 1s var(--ease) var(--d, .3s), opacity .8s ease var(--d, .3s); }
+.sl-photo { transform: translateX(14%); }
+.sl-photo img { transform: scale(1.25); }
+.sl-stripe { transform: translateX(26%); }
+.sl-card { opacity: 0; transform: translateY(30px); }
+.sl.is-active .sl-photo, .sl.is-active .sl-stripe { transform: none; transition: transform 1.3s var(--ease) .25s; }
+.sl.is-active .sl-stripe { transition-delay: .1s; }
+.sl.is-active .sl-photo img { transform: none; transition: transform 2.2s var(--ease) .25s; }
+.sl.is-active .sl-card { opacity: 1; transform: none; transition: transform .9s var(--ease) 1s, opacity .6s ease 1s; }
+.sl.is-active .sl-num { animation: hbNum 1.4s var(--ease) both; }
+@keyframes hbNum { from { transform: translateX(-6%); opacity: 0; } to { transform: none; opacity: .07; } }
+
+/* badge + controls */
+.hb-badge { position: absolute; z-index: 9; top: clamp(16px, 2.6vw, 40px); right: clamp(16px, 3vw, 48px); width: clamp(88px, 9.5vw, 140px); filter: drop-shadow(0 10px 18px rgba(0,0,0,.3)); }
+.hb-badge svg { display: block; width: 100%; height: auto; } .hb-spin { transform-origin: 100px 100px; animation: bnSpin 16s linear infinite; }
+.hb-ctrl { position: absolute; z-index: 9; left: clamp(24px, 5vw, 84px); bottom: clamp(22px, 3vw, 40px); display: flex; align-items: center; gap: 16px; color: var(--hb-fg); transition: color .6s; }
+.hb-arrow { width: 52px; height: 52px; display: grid; place-items: center; border: 2px solid currentColor; background: transparent; color: inherit; cursor: pointer; transition: background .3s, color .3s; }
+.hb-arrow svg { width: 22px; height: 22px; }
+.hb-arrow:hover { background: var(--hb-fg); color: var(--hb-bg, #111); }
+.hb-dots { display: flex; gap: 8px; }
+.hb-dot { position: relative; width: clamp(30px, 4vw, 58px); height: 14px; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.hb-dot::before { content: ""; position: absolute; left: 0; right: 0; top: 5px; height: 4px; background: currentColor; opacity: .3; }
+.hb-dot i { position: absolute; left: 0; top: 5px; height: 4px; width: 100%; background: currentColor; transform: scaleX(0); transform-origin: left; }
+.hb-dot.is-active i { animation: hbFill var(--dur, 6s) linear forwards; }
+.hb.is-paused .hb-dot.is-active i { animation-play-state: paused; }
+@keyframes hbFill { to { transform: scaleX(1); } }
+
+@media (max-width: 900px) {
+  .hb { height: 880px; }
+  .sl-copy { width: auto; right: 24px; left: 24px; top: 34px; transform: none; }
+  .sl-title { font-size: clamp(44px, 13vw, 78px) !important; line-height: .94 !important; }
+  .sl-sub { display: none; }
+  .sl-eyebrow { margin-bottom: 16px; font-size: 10px; }
+  .sl-actions { margin-top: 22px; }
+  .sl-stripe { width: 100%; top: 400px; clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%); }
+  .sl-photo { width: 100%; top: 420px; bottom: 0; clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%); }
+  .sl-photo img { object-position: 50% 22%; }
+  .sl-card { min-width: 0; right: 16px; bottom: 96px; padding: 11px 15px; }
+  .sl-card b { font-size: 15px; }
+  .sl-num { font-size: 60vw; bottom: auto; top: 18%; }
+  .hb-badge { width: 80px; top: 400px; }
+  .hb-ctrl { left: 16px; right: 16px; gap: 10px; bottom: 18px; }
+  .hb-arrow { width: 44px; height: 44px; background: rgba(17,17,17,.55); color: #fff; border-color: #fff; }
+  .hb-dots { flex: 1; justify-content: center; } .hb-dot { width: auto; flex: 1; max-width: 50px; }
+  .hb-ctrl { color: #fff; }
+}
+@media (prefers-reduced-motion: reduce) { .sl, .sl * , .hb-spin { transition: none !important; animation: none !important; } .sl .rv, .sl-title .ln i.rv { opacity: 1; transform: none; } .sl-photo, .sl-stripe, .sl-photo img, .sl-card { transform: none; opacity: 1; } }
+.sl.is-active .sl-title .ln i.rv { transform: none; transition: transform 1s var(--ease) var(--d, .3s); }
+@media (prefers-reduced-motion: reduce) { .sl-title .ln i.rv { transform: none !important; } }
