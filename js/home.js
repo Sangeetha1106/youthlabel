@@ -59,3 +59,9 @@
   function playVids(on){vids.forEach(function(v){if(on&&!paused&&!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})}
   if('IntersectionObserver' in window){new IntersectionObserver(function(en){var on=en[0].isIntersecting;on?start():stop();playVids(on)},{threshold:.25}).observe(sec)}else{start();playVids(true)}
 })();
+
+/* Shop by Category carousel arrows */
+(function(){var t=document.getElementById('cat-reel');if(!t)return;
+  document.querySelectorAll('[data-cr]').forEach(function(b){b.addEventListener('click',function(){
+    var w=(t.querySelector('.cr-tile')||t).offsetWidth+14;t.scrollBy({left:b.dataset.cr==='next'?w:-w,behavior:'smooth'});});});
+})();

@@ -9694,3 +9694,21 @@ body.homepage-redesign .site-header.menu-open {
 .zm-hint{margin:0;padding:10px 16px;text-align:center;font-size:12px;color:rgba(255,255,255,.6)}
 html.zm-open{overflow:hidden}
 @media(max-width:700px){.zm-hint{display:none}}
+
+/* ==========================================================================
+   SHOP BY CATEGORY – single-row photo carousel
+   ========================================================================== */
+.cr-section{padding-left:0;padding-right:0;overflow:hidden}
+.cr-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;
+  padding:4px 0 12px;scroll-padding-left:0;-webkit-overflow-scrolling:touch}
+.cr-track::-webkit-scrollbar{display:none}
+.cr-tile{position:relative;flex:0 0 clamp(260px,29vw,420px);aspect-ratio:3/4.1;border-radius:16px;overflow:hidden;scroll-snap-align:start;background:#ddd;isolation:isolate;display:block;border:0;box-shadow:none}
+.cr-tile:hover{transform:none;box-shadow:none}
+.cr-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease,ease)}
+.cr-tile:hover img{transform:scale(1.06)}
+.cr-tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.62) 100%);z-index:1}
+.cr-info{position:absolute;z-index:2;left:clamp(18px,2.2vw,32px);right:18px;bottom:clamp(18px,2.2vw,30px);color:#fff;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.cr-info b{font-size:clamp(22px,2.3vw,34px);line-height:1.05;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:#fff}
+.cr-btn{display:inline-block;padding:13px 26px;border-radius:999px;background:#f1f0ec;color:#111;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;transition:background .25s,color .25s}
+.cr-tile:hover .cr-btn{background:#111;color:#fff}
+@media(max-width:900px){.cr-tile{flex-basis:72%}.cr-info b{font-size:22px}.cr-section .car-btn{display:none}}

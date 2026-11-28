@@ -154,19 +154,38 @@
   </section>
 
   <!-- =========================================================================
-       SHOP BY CATEGORY (grid)
+       SHOP BY CATEGORY (single-row carousel)
        ========================================================================= -->
-  <section class="section catg-section" id="shop-by-category" aria-label="Shop by Category">
+  <section class="section cr-section" id="shop-by-category" aria-label="Shop by Category">
     <div class="wrap">
-      <div class="sec-head center"><p class="eyebrow">Browse</p><h2 class="section-title">Shop by Category</h2></div>
-      <div class="catg">
-      <a class="catg-tile" href="shop.html"><span class="catg-img"><img src="assets/images/banners/hd/wild-upper.jpg" alt="Sweatshirts" style="object-position:50% 15%" loading="lazy" decoding="async"></span><span class="catg-label"><b>Sweatshirts</b></span></a>
-      <a class="catg-tile" href="shop.html#tshirts"><span class="catg-img"><img src="assets/images/products/animal-graphic-tshirt.jpg" alt="T-Shirts" style="object-position:50% 40%" loading="lazy" decoding="async"></span><span class="catg-label"><b>T-Shirts</b></span></a>
-      <a class="catg-tile" href="shop.html#shirts"><span class="catg-img"><img src="assets/images/products/black-denim-shirt.jpg" alt="Shirts" style="object-position:50% 8%" loading="lazy" decoding="async"></span><span class="catg-label"><b>Shirts</b></span></a>
-      <a class="catg-tile" href="shop.html#joggers"><span class="catg-img"><img src="assets/images/banners/hd/future-lower.jpg" alt="Trousers & Joggers" style="object-position:50% 50%" loading="lazy" decoding="async"></span><span class="catg-label"><b>Trousers &amp; Joggers</b></span></a>
-      <a class="catg-tile" href="shop.html#coords"><span class="catg-img"><img src="assets/images/banners/hd/rookie-full.jpg" alt="Co-ord Sets" style="object-position:50% 14%" loading="lazy" decoding="async"></span><span class="catg-label"><b>Co-ord Sets</b></span></a>
-      <a class="catg-tile" href="shop.html#new"><span class="catg-img"><img src="assets/images/banners/hd/homies-full.jpg" alt="New Arrivals" style="object-position:50% 14%" loading="lazy" decoding="async"></span><span class="catg-label"><b>New Arrivals</b></span></a>
-      </div>
+      <div class="sec-head"><div><p class="eyebrow">Browse</p><h2 class="section-title">Shop by Category</h2></div>
+        <div class="sec-tools"><button type="button" class="car-btn" data-cr="prev" aria-label="Previous categories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" class="car-btn" data-cr="next" aria-label="Next categories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div></div>
+    </div>
+    <div class="cr-track" id="cat-reel" tabindex="0" aria-label="Shop by category carousel">
+        <a class="cr-tile" href="shop.html">
+          <img src="assets/images/banners/hd/wild-upper.jpg" alt="Sweatshirts" style="object-position:50% 15%" loading="lazy" decoding="async">
+          <span class="cr-info"><b>Shop Sweatshirts</b><span class="cr-btn">Explore</span></span>
+        </a>
+        <a class="cr-tile" href="shop.html#tshirts">
+          <img src="assets/images/products/animal-graphic-tshirt.jpg" alt="T-Shirts" style="object-position:50% 35%" loading="lazy" decoding="async">
+          <span class="cr-info"><b>Shop T-Shirts</b><span class="cr-btn">Explore</span></span>
+        </a>
+        <a class="cr-tile" href="shop.html#shirts">
+          <img src="assets/images/products/black-denim-shirt.jpg" alt="Shirts" style="object-position:50% 12%" loading="lazy" decoding="async">
+          <span class="cr-info"><b>Shop Shirts</b><span class="cr-btn">Explore</span></span>
+        </a>
+        <a class="cr-tile" href="shop.html#joggers">
+          <img src="assets/images/banners/hd/future-lower.jpg" alt="Trousers & Joggers" style="object-position:50% 50%" loading="lazy" decoding="async">
+          <span class="cr-info"><b>Shop Trousers &amp; Joggers</b><span class="cr-btn">Explore</span></span>
+        </a>
+        <a class="cr-tile" href="shop.html#coords">
+          <img src="assets/images/banners/hd/rookie-full.jpg" alt="Co-ord Sets" style="object-position:50% 14%" loading="lazy" decoding="async">
+          <span class="cr-info"><b>Shop Co-ord Sets</b><span class="cr-btn">Explore</span></span>
+        </a>
+        <a class="cr-tile" href="shop.html#new">
+          <img src="assets/images/banners/hd/homies-full.jpg" alt="New Arrivals" style="object-position:50% 14%" loading="lazy" decoding="async">
+          <span class="cr-info"><b>Shop New Arrivals</b><span class="cr-btn">Explore</span></span>
+        </a>
     </div>
   </section>
 
