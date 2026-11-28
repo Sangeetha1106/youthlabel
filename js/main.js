@@ -2094,21 +2094,47 @@
   // ---------------------------------------------------------------------------
   function initNav() {
     const toggle = document.getElementById('nav-toggle');
+    const siteHeader = document.querySelector('.site-header');
     const navLinks = document.querySelectorAll('.main-nav a:not(.dropdown-trigger)');
     const dropdownWrap = document.querySelector('.nav-dropdown');
     const dropdownTrigger = document.querySelector('.dropdown-trigger');
+
+    function syncHeaderMenuState() {
+      if (siteHeader && toggle) {
+        siteHeader.classList.toggle('menu-open', toggle.checked);
+      }
+      if (toggle && !toggle.checked && dropdownWrap) {
+        dropdownWrap.classList.remove('mobile-open', 'is-open');
+        if (dropdownTrigger) dropdownTrigger.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    if (toggle) {
+      toggle.addEventListener('change', syncHeaderMenuState);
+    }
 
     if (toggle && navLinks.length) {
       navLinks.forEach(function (link) {
         link.addEventListener('click', function () {
           toggle.checked = false;
+          syncHeaderMenuState();
         });
       });
 
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
-          if (toggle.checked) toggle.checked = false;
+          if (toggle.checked) {
+            toggle.checked = false;
+            syncHeaderMenuState();
+          }
           if (dropdownWrap) dropdownWrap.classList.remove('mobile-open', 'is-open');
+        }
+      });
+
+      document.addEventListener('click', function (e) {
+        if (toggle.checked && siteHeader && !siteHeader.contains(e.target)) {
+          toggle.checked = false;
+          syncHeaderMenuState();
         }
       });
     }
@@ -2131,7 +2157,10 @@
       const dropdownLinks = dropdownWrap.querySelectorAll('.dropdown-link');
       dropdownLinks.forEach(function (dLink) {
         dLink.addEventListener('click', function (e) {
-          if (toggle) toggle.checked = false;
+          if (toggle) {
+            toggle.checked = false;
+            syncHeaderMenuState();
+          }
           dropdownWrap.classList.remove('mobile-open', 'is-open');
           const href = dLink.getAttribute('href') || '';
           if (window.location.pathname.endsWith('shop.html') || window.location.pathname.endsWith('shop')) {

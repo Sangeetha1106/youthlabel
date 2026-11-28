@@ -18,7 +18,8 @@
     dots[idx].classList.remove('is-active'); dots[n].classList.add('is-active');
     hb.style.setProperty('--hb-fg', next.getAttribute('data-fg')); hb.style.setProperty('--hb-bg', next.getAttribute('data-bg'));
     idx = n;
-    setTimeout(function () { prev.classList.remove('is-leaving'); busy = false; }, 1200);
+    var lockMs = window.innerWidth <= 900 ? 650 : 1200;
+    setTimeout(function () { prev.classList.remove('is-leaving'); busy = false; }, lockMs);
     restart();
   }
   function restart() {
@@ -34,8 +35,13 @@
   });
   dots.forEach(function (d, i) { d.addEventListener('click', function () { go(i); }); });
 
-  hb.addEventListener('mouseenter', function () { hb.classList.add('is-paused'); stop(); });
-  hb.addEventListener('mouseleave', function () { hb.classList.remove('is-paused'); restart(); });
+  // Pause on mouse hover only so touch taps on mobile never freeze autoplay
+  hb.addEventListener('pointerenter', function (e) {
+    if (e.pointerType === 'mouse') { hb.classList.add('is-paused'); stop(); }
+  });
+  hb.addEventListener('pointerleave', function (e) {
+    if (e.pointerType === 'mouse') { hb.classList.remove('is-paused'); restart(); }
+  });
   hb.addEventListener('keydown', function (e) {
     if (e.key === 'ArrowRight') go(idx + 1);
     if (e.key === 'ArrowLeft') go(idx - 1);
